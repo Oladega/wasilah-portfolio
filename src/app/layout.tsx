@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import "./globals.css";
+export const metadata: Metadata = {
+  title: "Mira Alvarez — Brand & Product Designer",
+  description:
+    "Portfolio of Atilade Wasilat — marketing, social media, and events.",
+};
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

@@ -1,0 +1,58 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { mkdir } from 'node:fs/promises';
+const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+const page = await browser.newPage();
+const base = process.env.BASE_URL || 'http://localhost:3001';
+const errors = [];
+page.on('pageerror', error => errors.push(error.message));
+await mkdir('docs/screenshots/navigation-update', { recursive: true });
+for (const width of [1440, 1024, 430, 375]) {
+  await page.setViewportSize({ width, height: 932 });
+  await page.goto(base);
+  if (width === 1440) {
+    await page.locator('[class*="welcome"]').waitFor({ state: 'visible' });
+    await page.locator('[class*="welcome"]').waitFor({ state: 'detached' });
+  }
+  const nav = page.getByRole('navigation', { name: 'Portfolio', exact: true });
+  const labels = await nav.getByRole('button').allTextContents();
+  assert.equal(await page.getByRole('navigation', { name: 'Social links', includeHidden: true }).count(), 0);
+  await nav.getByRole('button', { name: 'My Work', exact: true }).click();
+  const work = page.getByRole('dialog', { name: 'Work', exact: true });
+  await work.waitFor();
+  await page.waitForTimeout(350);
+  const bounds = await work.boundingBox();
+  const radius = await work.evaluate(el => getComputedStyle(el).borderRadius);
+  await work.locator('a[href="/work/pulse"]').click();
+  await page.waitForURL('**/work/pulse');
+  const project = page.getByRole('dialog', { name: 'Final Year Week ’26 project', exact: true });
+  await project.waitFor();
+  assert.equal(await page.getByRole('dialog').count(), 1);
+  assert.deepEqual(await nav.getByRole('button').allTextContents(), labels);
+  assert.equal(await page.getByRole('heading', { name: /Hi, I'm Wasilah/ }).count(), 1);
+  assert.equal(await page.getByText('Case Studies', { exact: true }).count(), 0);
+  assert.equal(await page.getByText('Photos', { exact: true }).count(), 0);
+  assert.equal(await page.getByText('Showreel.mov', { exact: true }).count(), 0);
+  assert.equal(await project.evaluate(el => getComputedStyle(el).borderRadius), radius);
+  const projectBounds = await project.boundingBox();
+  assert.ok(projectBounds.width >= bounds.width - 1);
+  assert.ok(projectBounds.height >= bounds.height - 1);
+  assert.equal(await page.locator('[class*="welcome"]').count(), 0);
+  await page.screenshot({ path: `docs/screenshots/navigation-update/project-${width}.png` });
+  await page.getByRole('link', { name: 'Back to all work' }).click();
+  await page.waitForURL('**/#work');
+  await work.waitFor();
+  assert.equal(await page.getByRole('dialog').count(), 1);
+  assert.equal(await work.locator('a[href^="/work/"]').count(), 5);
+  assert.equal(await page.locator('[class*="welcome"]').count(), 0);
+  await page.screenshot({ path: `docs/screenshots/navigation-update/work-${width}.png` });
+  await page.keyboard.press('Escape');
+  assert.equal(await page.getByRole('dialog').count(), 0);
+  assert.equal(new URL(page.url()).hash, '');
+  await page.reload();
+  await page.waitForTimeout(150);
+  assert.equal(await page.locator('[class*="welcome"]').count(), 0);
+}
+assert.deepEqual(errors, []);
+await browser.close();
+console.log('Passed: shared desktop, no bottom dock, larger matching project window, Back returns to Work, one modal, welcome once per session; four viewport sizes.');

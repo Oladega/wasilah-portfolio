@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "about": "pass",
+      "filters": "pass",
+      "projectNavigation": "pass",
+      "contactResume": "pass",
+      "download": "pass"
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "about": "pass",
+      "filters": "pass",
+      "projectNavigation": "pass",
+      "contactResume": "pass",
+      "download": "pass"
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "about": "pass",
+      "filters": "pass",
+      "projectNavigation": "pass",
+      "contactResume": "pass",
+      "download": "pass"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "about": "pass",
+      "filters": "pass",
+      "projectNavigation": "pass",
+      "contactResume": "pass",
+      "download": "pass"
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "about": "pass",
+      "filters": "pass",
+      "projectNavigation": "pass",
+      "contactResume": "pass",
+      "download": "pass"
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "about": "pass",
+      "filters": "pass",
+      "projectNavigation": "pass",
+      "contactResume": "pass",
+      "download": "pass"
+    },
+    {
+      "route": "/work/pulse",
+      "sectionScroll": "pass",
+      "relatedCards": "pass"
+    },
+    {
+      "route": "/work/nacre",
+      "sectionScroll": "pass",
+      "relatedCards": "pass"
+    },
+    {
+      "route": "/work/kiln-co",
+      "sectionScroll": "pass",
+      "relatedCards": "pass"
+    },
+    {
+      "route": "/work/orbit",
+      "sectionScroll": "pass",
+      "relatedCards": "pass"
+    }
+  ],
+  "music": "pass",
+  "reducedMotion": "pass",
+  "runtimeErrors": []
+}

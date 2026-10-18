@@ -1,0 +1,38 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { mkdir } from 'node:fs/promises';
+const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
+const page = await browser.newPage();
+await page.emulateMedia({ reducedMotion: 'reduce' });
+await mkdir('docs/screenshots/about-content', { recursive: true });
+for (const width of [1440,1024,430,375]) {
+ await page.setViewportSize({width,height:932});
+ await page.goto(process.env.BASE_URL || 'http://localhost:3001');
+ await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button',{name:width<810?'About Me':'About Wasilah',exact:true}).click();
+ const about=page.getByRole('dialog',{name:'About Wasilah'});
+ const capabilities=about.getByRole('region',{name:'What I do',exact:true});
+ assert.equal(await capabilities.locator('li').count(),19);
+ for (const title of ['Marketing','Events','Community','Operations']) assert.equal(await capabilities.getByRole('heading',{name:title,exact:true}).count(),1);
+ assert.equal(await capabilities.locator('img').count(),0);
+ const impact=about.getByRole('region',{name:'Evidence of impact & experience'});
+ assert.deepEqual(await impact.locator('dt').allTextContents(),['1,000+','800+','₦2.5M+','500+','6/6']);
+ assert.equal(await impact.locator('img').count(),0);
+ assert.equal(await impact.getByText('Across major conference initiatives',{exact:true}).count(),0);
+ if (width===1440) await about.getByRole('button',{name:'What I do',exact:true}).click();
+ else await capabilities.scrollIntoViewIfNeeded();
+ await page.screenshot({path:`docs/screenshots/about-content/capabilities-${width}.png`});
+ if (width===1440) await about.getByRole('button',{name:'My impact',exact:true}).click();
+ else await impact.scrollIntoViewIfNeeded();
+ await page.screenshot({path:`docs/screenshots/about-content/impact-${width}.png`});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ assert.equal(await capabilities.evaluate(el=>el.scrollWidth>el.clientWidth+1),false);
+ await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'My Work',exact:true}).click();
+ const work=page.getByRole('dialog',{name:'Work',exact:true});
+ assert.equal(await work.locator('a[href^="/work/"]').count(),5);
+ assert.equal(await work.getByText('Capabilities & impact',{exact:true}).count(),0);
+ assert.equal(await work.locator('img[src*="capabilities"], img[src*="impact"]').count(),0);
+ assert.equal(await work.getByRole('link',{name:'Download portfolio PDF ↓',exact:true}).count(),1);
+}
+await browser.close();
+console.log('Passed: 19 capability items and five complete impact metrics as native About text, desktop section navigation, no overview graphics in Work, four responsive layouts.');

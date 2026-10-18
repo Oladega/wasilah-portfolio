@@ -1,0 +1,8 @@
+{
+  "stackedWindows": "pass",
+  "escapeClosesOnlyFrontWindow": "pass",
+  "keyboardFocusWrap": "pass",
+  "resumePageNavigation": "pass",
+  "desktopIconDragging": "pass",
+  "windowDragging": "pass"
+}

@@ -1,0 +1,21 @@
+:root {
+  --color-background: #493544;
+  --color-text: #fff;
+  --color-secondary: rgba(255, 255, 255, 0.88);
+  --color-muted: rgba(255, 255, 255, 0.75);
+  --color-glass: rgba(78, 58, 77, 0.92);
+  --color-sidebar: rgba(42, 27, 43, 0.22);
+  --color-border: rgba(255, 255, 255, 0.22);
+  --color-accent: #0a84ff;
+  --font-primary: "Geist", sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-numeric: var(--font-display);
+  --font-mono: "Geist Mono", monospace;
+  --font-handwriting: "Caveat", cursive;
+  --menu-height: 36px;
+  --glass-blur: 16px;
+  --window-radius: 18px;
+  --duration-fast: 150ms;
+  --duration-window: 280ms;
+  --window-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

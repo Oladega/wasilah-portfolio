@@ -1,0 +1,59 @@
+.welcome {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #14244e;
+  animation: welcome 1.7s 0.1s both;
+}
+.welcome p {
+  font: italic 150px/1 var(--font-display);
+  letter-spacing: -0.03em;
+  max-width: 95%;
+  text-align: center;
+}
+.spinner {
+  position: absolute;
+  top: 60%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px dotted #ffffffaa;
+  animation: spin 1s linear infinite;
+}
+@keyframes welcome {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .welcome p {
+    font-size: 120px;
+  }
+}
+@media (max-width: 809.98px) {
+  .welcome p {
+    font-size: 84px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .welcome {
+    display: none;
+  }
+}

@@ -1,0 +1,1260 @@
+{
+  "/": {
+    "images": [
+      {
+        "src": "https://framerusercontent.com/images/jbt2xT7AOw5Qrs3eGkI5rQ9Z9SU.png?scale-down-to=2048&width=2560&height=1440",
+        "alt": "Moonlit salt flat with an arched pavilion"
+      },
+      {
+        "src": "https://framerusercontent.com/images/DnMEJJsFz5E5G7QeY8jM5Hz5A1Y.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/su3RltFj7wmRPJuC5izK9K6AIjM.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/N1yShsTTdF3i8Jv4HdzPOskWrc.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/DrhCTvdXIAltzmPzqWytmNcMQQ.png?width=256&height=256",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/jbt2xT7AOw5Qrs3eGkI5rQ9Z9SU.png?scale-down-to=2048&width=2560&height=1440",
+        "alt": ""
+      }
+    ],
+    "ancestors": [
+      {
+        "class": "framer-19sno61",
+        "name": "Desktop",
+        "style": null,
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "filter": "none",
+        "opacity": "1"
+      },
+      {
+        "class": "framer-n1rw47",
+        "name": "Welcome (loading)",
+        "style": "opacity: 0; transform: none; will-change: transform;",
+        "background": "rgb(20, 36, 78) none repeat scroll 0% 0% / auto padding-box border-box",
+        "filter": "none",
+        "opacity": "0"
+      }
+    ],
+    "text": [
+      {
+        "text": "Atilade Wasilat",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "600",
+        "r": {
+          "x": 18,
+          "y": 9.546875,
+          "width": 93.484375,
+          "height": 16.90625,
+          "top": 9.546875,
+          "right": 111.484375,
+          "bottom": 26.453125,
+          "left": 18
+        }
+      },
+      {
+        "text": "About Wasilah",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 29.578125,
+          "y": 134,
+          "width": 80.84375,
+          "height": 15.59375,
+          "top": 134,
+          "right": 110.421875,
+          "bottom": 149.59375,
+          "left": 29.578125
+        }
+      },
+      {
+        "text": "My Work",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 45.078125,
+          "y": 270.59375,
+          "width": 49.84375,
+          "height": 15.59375,
+          "top": 270.59375,
+          "right": 94.921875,
+          "bottom": 286.1875,
+          "left": 45.078125
+        }
+      },
+      {
+        "text": "Résumé.pdf",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 36.5,
+          "y": 407.1875,
+          "width": 66.984375,
+          "height": 15.59375,
+          "top": 407.1875,
+          "right": 103.484375,
+          "bottom": 422.78125,
+          "left": 36.5
+        }
+      },
+      {
+        "text": "Contact Me",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 37.359375,
+          "y": 535.78125,
+          "width": 65.265625,
+          "height": 15.59375,
+          "top": 535.78125,
+          "right": 102.625,
+          "bottom": 551.375,
+          "left": 37.359375
+        }
+      },
+      {
+        "text": "Available for projects",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 1218,
+          "y": 156,
+          "width": 119,
+          "height": 15.59375,
+          "top": 156,
+          "right": 1337,
+          "bottom": 171.59375,
+          "left": 1218
+        }
+      },
+      {
+        "text": "Marketing",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 605.390625,
+          "y": 172,
+          "width": 65.34375,
+          "height": 14.296875,
+          "top": 172,
+          "right": 670.734375,
+          "bottom": 186.296875,
+          "left": 605.390625
+        }
+      },
+      {
+        "text": "⏺",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 678.734375,
+          "y": 172,
+          "width": 7.59375,
+          "height": 14.296875,
+          "top": 172,
+          "right": 686.328125,
+          "bottom": 186.296875,
+          "left": 678.734375
+        }
+      },
+      {
+        "text": "social media",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 694.328125,
+          "y": 172,
+          "width": 87.125,
+          "height": 14.296875,
+          "top": 172,
+          "right": 781.453125,
+          "bottom": 186.296875,
+          "left": 694.328125
+        }
+      },
+      {
+        "text": "⏺",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 789.453125,
+          "y": 172,
+          "width": 7.59375,
+          "height": 14.296875,
+          "top": 172,
+          "right": 797.046875,
+          "bottom": 186.296875,
+          "left": 789.453125
+        }
+      },
+      {
+        "text": "events",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 805.046875,
+          "y": 172,
+          "width": 43.5625,
+          "height": 14.296875,
+          "top": 172,
+          "right": 848.609375,
+          "bottom": 186.296875,
+          "left": 805.046875
+        }
+      },
+      {
+        "text": "Hi, I'm WasilahI create, coordinate and promote experiences that connect people.",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "60px",
+        "line": "58.8px",
+        "weight": "400",
+        "r": {
+          "x": 200,
+          "y": 224.296875,
+          "width": 1040,
+          "height": 176.390625,
+          "top": 224.296875,
+          "right": 1240,
+          "bottom": 400.6875,
+          "left": 200
+        }
+      },
+      {
+        "text": "See my work",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "14px",
+        "line": "16.8px",
+        "weight": "600",
+        "r": {
+          "x": 668.234375,
+          "y": 445.6875,
+          "width": 86.328125,
+          "height": 16.796875,
+          "top": 445.6875,
+          "right": 754.5625,
+          "bottom": 462.484375,
+          "left": 668.234375
+        }
+      },
+      {
+        "text": "↵",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "12px",
+        "line": "14.4px",
+        "weight": "500",
+        "r": {
+          "x": 764.5625,
+          "y": 446.875,
+          "width": 7.203125,
+          "height": 14.40625,
+          "top": 446.875,
+          "right": 771.765625,
+          "bottom": 461.28125,
+          "left": 764.5625
+        }
+      },
+      {
+        "text": "Create a free website with Framer, the website builder loved by startups, designers and agencies.",
+        "font": "sans-serif",
+        "size": "12px",
+        "line": "normal",
+        "weight": "400",
+        "r": {
+          "x": 1349.9405517578125,
+          "y": 860.9650268554688,
+          "width": 0.118896484375,
+          "height": 0.0699462890625,
+          "top": 860.9650268554688,
+          "right": 1350.0594482421875,
+          "bottom": 861.0349731445312,
+          "left": 1349.9405517578125
+        }
+      }
+    ]
+  },
+  "/work/halden": {
+    "images": [
+      {
+        "src": "https://framerusercontent.com/images/jbt2xT7AOw5Qrs3eGkI5rQ9Z9SU.png?scale-down-to=2048&width=2560&height=1440",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/su3RltFj7wmRPJuC5izK9K6AIjM.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/Pb09zZZNAHLB0yD6ZGrE4ULGh7U.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/DnMEJJsFz5E5G7QeY8jM5Hz5A1Y.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/h7fK1ZWx3d2UTaGUSUd0oH08Fk.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/hOypm29BN7Hz92XWXNk8lh8kpY.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/N1yShsTTdF3i8Jv4HdzPOskWrc.png?width=160&height=160",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/ZhZaIObG1Dh0XNeIzMJMcGDpc.png",
+        "alt": "X"
+      },
+      {
+        "src": "https://framerusercontent.com/images/ZhZaIObG1Dh0XNeIzMJMcGDpc.png",
+        "alt": "X"
+      },
+      {
+        "src": "https://framerusercontent.com/images/HCehkjv5ZygpTE95tD7zs8eSiM.png",
+        "alt": "Contact"
+      },
+      {
+        "src": "https://framerusercontent.com/images/xXuLwhzNghmfLGMG8ySVQf038.png",
+        "alt": "Threads"
+      },
+      {
+        "src": "https://framerusercontent.com/images/tOYp9YV0fuiuowBNyTg5oHUM1I.png?scale-down-to=512&width=1760&height=1328",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/OFiZjpYHyKhahkR2gj8GABBNXbA.png?width=920&height=330",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/ft0BYd0oO4Ljis7oGpdn1UZcLU.png?scale-down-to=512&width=1760&height=1328",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/a2apw0uzeVtqe6C0pVoAbPzoRU.png?scale-down-to=512&width=1760&height=1328",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/tOYp9YV0fuiuowBNyTg5oHUM1I.png?scale-down-to=512&width=1760&height=1328",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/pb23rxhDwQlYL8G6OOwCFJtdbw.png?scale-down-to=512&width=1760&height=1328",
+        "alt": ""
+      },
+      {
+        "src": "https://framerusercontent.com/images/TzKmhLSL4zTl5VoaSLYXTxt7nww.png?scale-down-to=512&width=1760&height=1328",
+        "alt": ""
+      }
+    ],
+    "ancestors": [
+      {
+        "class": "framer-q774q7",
+        "name": "Desktop",
+        "style": null,
+        "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+        "filter": "none",
+        "opacity": "1"
+      }
+    ],
+    "text": [
+      {
+        "text": "Mira Alvarez",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "600",
+        "r": {
+          "x": 18,
+          "y": 9.546875,
+          "width": 77.234375,
+          "height": 16.90625,
+          "top": 9.546875,
+          "right": 95.234375,
+          "bottom": 26.453125,
+          "left": 18
+        }
+      },
+      {
+        "text": "Work",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 55.125,
+          "y": 134,
+          "width": 29.734375,
+          "height": 15.59375,
+          "top": 134,
+          "right": 84.859375,
+          "bottom": 149.59375,
+          "left": 55.125
+        }
+      },
+      {
+        "text": "Case Studies",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 33.015625,
+          "y": 240.59375,
+          "width": 73.96875,
+          "height": 15.59375,
+          "top": 240.59375,
+          "right": 106.984375,
+          "bottom": 256.1875,
+          "left": 33.015625
+        }
+      },
+      {
+        "text": "About Mira",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 39.328125,
+          "y": 347.1875,
+          "width": 61.34375,
+          "height": 15.59375,
+          "top": 347.1875,
+          "right": 100.671875,
+          "bottom": 362.78125,
+          "left": 39.328125
+        }
+      },
+      {
+        "text": "Photos",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 50.28125,
+          "y": 453.78125,
+          "width": 39.421875,
+          "height": 15.59375,
+          "top": 453.78125,
+          "right": 89.703125,
+          "bottom": 469.375,
+          "left": 50.28125
+        }
+      },
+      {
+        "text": "Showreel.mov",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 30.3125,
+          "y": 560.375,
+          "width": 79.359375,
+          "height": 15.59375,
+          "top": 560.375,
+          "right": 109.671875,
+          "bottom": 575.96875,
+          "left": 30.3125
+        }
+      },
+      {
+        "text": "Résumé.pdf",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 36.5,
+          "y": 666.96875,
+          "width": 66.984375,
+          "height": 15.59375,
+          "top": 666.96875,
+          "right": 103.484375,
+          "bottom": 682.5625,
+          "left": 36.5
+        }
+      },
+      {
+        "text": "Work",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 246,
+          "y": 102.203125,
+          "width": 29.734375,
+          "height": 15.59375,
+          "top": 102.203125,
+          "right": 275.734375,
+          "bottom": 117.796875,
+          "left": 246
+        }
+      },
+      {
+        "text": "Sunbo Collective",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "15px",
+        "line": "19.5px",
+        "weight": "600",
+        "r": {
+          "x": 299.734375,
+          "y": 100.25,
+          "width": 840.265625,
+          "height": 19.5,
+          "top": 100.25,
+          "right": 1140,
+          "bottom": 119.75,
+          "left": 299.734375
+        }
+      },
+      {
+        "text": "Overview",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "500",
+        "r": {
+          "x": 180,
+          "y": 162.546875,
+          "width": 138,
+          "height": 16.90625,
+          "top": 162.546875,
+          "right": 318,
+          "bottom": 179.453125,
+          "left": 180
+        }
+      },
+      {
+        "text": "Challenge",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "500",
+        "r": {
+          "x": 180,
+          "y": 196.546875,
+          "width": 138,
+          "height": 16.90625,
+          "top": 196.546875,
+          "right": 318,
+          "bottom": 213.453125,
+          "left": 180
+        }
+      },
+      {
+        "text": "Identity",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "500",
+        "r": {
+          "x": 180,
+          "y": 230.546875,
+          "width": 138,
+          "height": 16.90625,
+          "top": 230.546875,
+          "right": 318,
+          "bottom": 247.453125,
+          "left": 180
+        }
+      },
+      {
+        "text": "Results",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "500",
+        "r": {
+          "x": 180,
+          "y": 264.546875,
+          "width": 138,
+          "height": 16.90625,
+          "top": 264.546875,
+          "right": 318,
+          "bottom": 281.453125,
+          "left": 180
+        }
+      },
+      {
+        "text": "Next:",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "600",
+        "r": {
+          "x": 156,
+          "y": 781.09375,
+          "width": 33.578125,
+          "height": 16.90625,
+          "top": 781.09375,
+          "right": 189.578125,
+          "bottom": 798,
+          "left": 156
+        }
+      },
+      {
+        "text": "Final Year Week ’26",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "600",
+        "r": {
+          "x": 193.578125,
+          "y": 781.09375,
+          "width": 121.734375,
+          "height": 16.90625,
+          "top": 781.09375,
+          "right": 315.3125,
+          "bottom": 798,
+          "left": 193.578125
+        }
+      },
+      {
+        "text": "→",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "13px",
+        "line": "16.9px",
+        "weight": "600",
+        "r": {
+          "x": 319.3125,
+          "y": 781.09375,
+          "width": 10.359375,
+          "height": 16.90625,
+          "top": 781.09375,
+          "right": 329.671875,
+          "bottom": 798,
+          "left": 319.3125
+        }
+      },
+      {
+        "text": "Brand identity",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 370,
+          "y": 520,
+          "width": 101.640625,
+          "height": 14.296875,
+          "top": 520,
+          "right": 471.640625,
+          "bottom": 534.296875,
+          "left": 370
+        }
+      },
+      {
+        "text": "·",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 479.640625,
+          "y": 520,
+          "width": 7.265625,
+          "height": 14.296875,
+          "top": 520,
+          "right": 486.90625,
+          "bottom": 534.296875,
+          "left": 479.640625
+        }
+      },
+      {
+        "text": "2026",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "14.3px",
+        "weight": "500",
+        "r": {
+          "x": 494.90625,
+          "y": 520,
+          "width": 29.046875,
+          "height": 14.296875,
+          "top": 520,
+          "right": 523.953125,
+          "bottom": 534.296875,
+          "left": 494.90625
+        }
+      },
+      {
+        "text": "Making oat milk feel",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "60px",
+        "line": "58.8px",
+        "weight": "400",
+        "r": {
+          "x": 368,
+          "y": 548.296875,
+          "width": 596,
+          "height": 58.796875,
+          "top": 548.296875,
+          "right": 964,
+          "bottom": 607.09375,
+          "left": 368
+        }
+      },
+      {
+        "text": "Nordic",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "60px",
+        "line": "58.8px",
+        "weight": "400",
+        "r": {
+          "x": 368,
+          "y": 607.09375,
+          "width": 139.03125,
+          "height": 58.796875,
+          "top": 607.09375,
+          "right": 507.03125,
+          "bottom": 665.890625,
+          "left": 368
+        }
+      },
+      {
+        "text": ", not niche.",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "60px",
+        "line": "58.8px",
+        "weight": "400",
+        "r": {
+          "x": 507.03125,
+          "y": 607.09375,
+          "width": 215.046875,
+          "height": 58.796875,
+          "top": 607.09375,
+          "right": 722.078125,
+          "bottom": 665.890625,
+          "left": 507.03125
+        }
+      },
+      {
+        "text": "A calmer, Nordic identity that reads from three metres away.",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "15px",
+        "line": "24px",
+        "weight": "400",
+        "r": {
+          "x": 366,
+          "y": 685.890625,
+          "width": 520,
+          "height": 24,
+          "top": 685.890625,
+          "right": 886,
+          "bottom": 709.890625,
+          "left": 366
+        }
+      },
+      {
+        "text": "TL;DR",
+        "font": "Caveat, \"Caveat Placeholder\", sans-serif",
+        "size": "34px",
+        "line": "40.8px",
+        "weight": "700",
+        "r": {
+          "x": 987.9779663085938,
+          "y": 328.4595031738281,
+          "width": 75.39691162109375,
+          "height": 43.972259521484375,
+          "top": 328.4595031738281,
+          "right": 1063.3748779296875,
+          "bottom": 372.4317626953125,
+          "left": 987.9779663085938
+        }
+      },
+      {
+        "text": "+38%",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "34px",
+        "line": "34px",
+        "weight": "400",
+        "r": {
+          "x": 990.7696533203125,
+          "y": 392.81707763671875,
+          "width": 65.5157470703125,
+          "height": 36.763336181640625,
+          "top": 392.81707763671875,
+          "right": 1056.285400390625,
+          "bottom": 429.5804138183594,
+          "left": 990.7696533203125
+        }
+      },
+      {
+        "text": "sell-through",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "400",
+        "r": {
+          "x": 992.514404296875,
+          "y": 432.656982421875,
+          "width": 67.507080078125,
+          "height": 18.49664306640625,
+          "top": 432.656982421875,
+          "right": 1060.021484375,
+          "bottom": 451.15362548828125,
+          "left": 992.514404296875
+        }
+      },
+      {
+        "text": "12→140",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "34px",
+        "line": "34px",
+        "weight": "400",
+        "r": {
+          "x": 1071.583251953125,
+          "y": 388.324951171875,
+          "width": 87.588623046875,
+          "height": 37.727081298828125,
+          "top": 388.324951171875,
+          "right": 1159.171875,
+          "bottom": 426.0520324707031,
+          "left": 1071.583251953125
+        }
+      },
+      {
+        "text": "stores",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "400",
+        "r": {
+          "x": 1073.328125,
+          "y": 430.5598449707031,
+          "width": 34.725830078125,
+          "height": 17.06536865234375,
+          "top": 430.5598449707031,
+          "right": 1108.053955078125,
+          "bottom": 447.6252136230469,
+          "left": 1073.328125
+        }
+      },
+      {
+        "text": "2.1×",
+        "font": "\"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "size": "34px",
+        "line": "34px",
+        "weight": "400",
+        "r": {
+          "x": 1171.6754150390625,
+          "y": 385.70166015625,
+          "width": 47.5797119140625,
+          "height": 35.980255126953125,
+          "top": 385.70166015625,
+          "right": 1219.255126953125,
+          "bottom": 421.6819152832031,
+          "left": 1171.6754150390625
+        }
+      },
+      {
+        "text": "recall",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "400",
+        "r": {
+          "x": 1173.420166015625,
+          "y": 426.3648986816406,
+          "width": 30.714111328125,
+          "height": 16.89019775390625,
+          "top": 426.3648986816406,
+          "right": 1204.13427734375,
+          "bottom": 443.2550964355469,
+          "left": 1173.420166015625
+        }
+      },
+      {
+        "text": "Download PDF",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "500",
+        "r": {
+          "x": 1007.1378784179688,
+          "y": 491.80145263671875,
+          "width": 83.10162353515625,
+          "height": 19.177490234375,
+          "top": 491.80145263671875,
+          "right": 1090.239501953125,
+          "bottom": 510.97894287109375,
+          "left": 1007.1378784179688
+        }
+      },
+      {
+        "text": "Challenge",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "10px",
+        "line": "13px",
+        "weight": "500",
+        "r": {
+          "x": 370,
+          "y": 753.890625,
+          "width": 612,
+          "height": 13,
+          "top": 753.890625,
+          "right": 982,
+          "bottom": 766.890625,
+          "left": 370
+        }
+      },
+      {
+        "text": "Halden came to the studio with a strong product and a crowded shelf. The brief: stand out without shouting, and build a system that scales from a single launch to a full range.",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "15px",
+        "line": "24px",
+        "weight": "400",
+        "r": {
+          "x": 370,
+          "y": 778.890625,
+          "width": 612,
+          "height": 48,
+          "top": 778.890625,
+          "right": 982,
+          "bottom": 826.890625,
+          "left": 370
+        }
+      },
+      {
+        "text": "We started with research on shelf, on screen and in conversation — then reduced everything to one idea the whole team could repeat in a sentence.",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "15px",
+        "line": "24px",
+        "weight": "400",
+        "r": {
+          "x": 370,
+          "y": 846.890625,
+          "width": 612,
+          "height": 48,
+          "top": 846.890625,
+          "right": 982,
+          "bottom": 894.890625,
+          "left": 370
+        }
+      },
+      {
+        "text": "Identity",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "10px",
+        "line": "13px",
+        "weight": "500",
+        "r": {
+          "x": 366,
+          "y": 934.890625,
+          "width": 920,
+          "height": 13,
+          "top": 934.890625,
+          "right": 1286,
+          "bottom": 947.890625,
+          "left": 366
+        }
+      },
+      {
+        "text": "Results",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "10px",
+        "line": "13px",
+        "weight": "500",
+        "r": {
+          "x": 370,
+          "y": 1259.890625,
+          "width": 612,
+          "height": 13,
+          "top": 1259.890625,
+          "right": 982,
+          "bottom": 1272.890625,
+          "left": 370
+        }
+      },
+      {
+        "text": "Launched in 2026. In the first quarter: +38% sell-through, 12→140 stores, 2.1× recall.",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "15px",
+        "line": "24px",
+        "weight": "400",
+        "r": {
+          "x": 370,
+          "y": 1284.890625,
+          "width": 612,
+          "height": 24,
+          "top": 1284.890625,
+          "right": 982,
+          "bottom": 1308.890625,
+          "left": 370
+        }
+      },
+      {
+        "text": "Similar work",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "10px",
+        "line": "13px",
+        "weight": "500",
+        "r": {
+          "x": 370,
+          "y": 1356.890625,
+          "width": 612,
+          "height": 13,
+          "top": 1356.890625,
+          "right": 982,
+          "bottom": 1369.890625,
+          "left": 370
+        }
+      },
+      {
+        "text": "Open",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "14.4px",
+        "weight": "600",
+        "r": {
+          "x": 390,
+          "y": 1549.6875,
+          "width": 30.6875,
+          "height": 14.40625,
+          "top": 1549.6875,
+          "right": 420.6875,
+          "bottom": 1564.09375,
+          "left": 390
+        }
+      },
+      {
+        "text": "↵",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "13.2px",
+        "weight": "500",
+        "r": {
+          "x": 426.6875,
+          "y": 1550.28125,
+          "width": 6.609375,
+          "height": 13.203125,
+          "top": 1550.28125,
+          "right": 433.296875,
+          "bottom": 1563.484375,
+          "left": 426.6875
+        }
+      },
+      {
+        "text": "Final Year Week ’26",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "14px",
+        "line": "18.2px",
+        "weight": "600",
+        "r": {
+          "x": 384,
+          "y": 1592.09375,
+          "width": 179.328125,
+          "height": 18.203125,
+          "top": 1592.09375,
+          "right": 563.328125,
+          "bottom": 1610.296875,
+          "left": 384
+        }
+      },
+      {
+        "text": "Product design",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "400",
+        "r": {
+          "x": 384,
+          "y": 1613.296875,
+          "width": 179.328125,
+          "height": 15.59375,
+          "top": 1613.296875,
+          "right": 563.328125,
+          "bottom": 1628.890625,
+          "left": 384
+        }
+      },
+      {
+        "text": "Open",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "14.4px",
+        "weight": "600",
+        "r": {
+          "x": 599.328125,
+          "y": 1549.6875,
+          "width": 30.6875,
+          "height": 14.40625,
+          "top": 1549.6875,
+          "right": 630.015625,
+          "bottom": 1564.09375,
+          "left": 599.328125
+        }
+      },
+      {
+        "text": "↵",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "13.2px",
+        "weight": "500",
+        "r": {
+          "x": 636.015625,
+          "y": 1550.28125,
+          "width": 6.609375,
+          "height": 13.203125,
+          "top": 1550.28125,
+          "right": 642.625,
+          "bottom": 1563.484375,
+          "left": 636.015625
+        }
+      },
+      {
+        "text": "Sign-Out After Party",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "14px",
+        "line": "18.2px",
+        "weight": "600",
+        "r": {
+          "x": 593.328125,
+          "y": 1592.09375,
+          "width": 179.328125,
+          "height": 18.203125,
+          "top": 1592.09375,
+          "right": 772.65625,
+          "bottom": 1610.296875,
+          "left": 593.328125
+        }
+      },
+      {
+        "text": "Packaging",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "400",
+        "r": {
+          "x": 593.328125,
+          "y": 1613.296875,
+          "width": 179.328125,
+          "height": 15.59375,
+          "top": 1613.296875,
+          "right": 772.65625,
+          "bottom": 1628.890625,
+          "left": 593.328125
+        }
+      },
+      {
+        "text": "Open",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "14.4px",
+        "weight": "600",
+        "r": {
+          "x": 808.65625,
+          "y": 1549.6875,
+          "width": 30.6875,
+          "height": 14.40625,
+          "top": 1549.6875,
+          "right": 839.34375,
+          "bottom": 1564.09375,
+          "left": 808.65625
+        }
+      },
+      {
+        "text": "↵",
+        "font": "\"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "size": "11px",
+        "line": "13.2px",
+        "weight": "500",
+        "r": {
+          "x": 845.34375,
+          "y": 1550.28125,
+          "width": 6.609375,
+          "height": 13.203125,
+          "top": 1550.28125,
+          "right": 851.953125,
+          "bottom": 1563.484375,
+          "left": 845.34375
+        }
+      },
+      {
+        "text": "Explore 7.0 — Annual Sociology Conference",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "14px",
+        "line": "18.2px",
+        "weight": "600",
+        "r": {
+          "x": 802.65625,
+          "y": 1592.09375,
+          "width": 179.328125,
+          "height": 18.203125,
+          "top": 1592.09375,
+          "right": 981.984375,
+          "bottom": 1610.296875,
+          "left": 802.65625
+        }
+      },
+      {
+        "text": "Web design",
+        "font": "Geist, \"Geist Placeholder\", sans-serif",
+        "size": "12px",
+        "line": "15.6px",
+        "weight": "400",
+        "r": {
+          "x": 802.65625,
+          "y": 1613.296875,
+          "width": 179.328125,
+          "height": 15.59375,
+          "top": 1613.296875,
+          "right": 981.984375,
+          "bottom": 1628.890625,
+          "left": 802.65625
+        }
+      },
+      {
+        "text": "Create a free website with Framer, the website builder loved by startups, designers and agencies.",
+        "font": "sans-serif",
+        "size": "12px",
+        "line": "normal",
+        "weight": "400",
+        "r": {
+          "x": 1349.9405517578125,
+          "y": 860.9650268554688,
+          "width": 0.118896484375,
+          "height": 0.0699462890625,
+          "top": 860.9650268554688,
+          "right": 1350.0594482421875,
+          "bottom": 861.0349731445312,
+          "left": 1349.9405517578125
+        }
+      }
+    ]
+  }
+}

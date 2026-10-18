@@ -1,0 +1,187 @@
+[
+  {
+    "name": "home-1440",
+    "meanChannelDifference": 2.4,
+    "changedPixelsPercent": 1.34
+  },
+  {
+    "name": "about-1440",
+    "meanChannelDifference": 4.06,
+    "changedPixelsPercent": 3.33
+  },
+  {
+    "name": "work-1440",
+    "meanChannelDifference": 3.53,
+    "changedPixelsPercent": 2.21
+  },
+  {
+    "name": "work-filter-1440",
+    "meanChannelDifference": 3.49,
+    "changedPixelsPercent": 2.06
+  },
+  {
+    "name": "resume-1440",
+    "meanChannelDifference": 4.45,
+    "changedPixelsPercent": 4.81
+  },
+  {
+    "name": "home-1280",
+    "meanChannelDifference": 2.6,
+    "changedPixelsPercent": 1.57
+  },
+  {
+    "name": "home-1024",
+    "meanChannelDifference": 2.88,
+    "changedPixelsPercent": 2.1
+  },
+  {
+    "name": "home-768",
+    "meanChannelDifference": 3.32,
+    "changedPixelsPercent": 2.65
+  },
+  {
+    "name": "about-768",
+    "meanChannelDifference": 3.13,
+    "changedPixelsPercent": 2.63
+  },
+  {
+    "name": "work-768",
+    "meanChannelDifference": 4.75,
+    "changedPixelsPercent": 4.6
+  },
+  {
+    "name": "work-filter-768",
+    "meanChannelDifference": 4.04,
+    "changedPixelsPercent": 2.69
+  },
+  {
+    "name": "resume-768",
+    "meanChannelDifference": 6.69,
+    "changedPixelsPercent": 8.53
+  },
+  {
+    "name": "home-430",
+    "meanChannelDifference": 3.75,
+    "changedPixelsPercent": 3.34
+  },
+  {
+    "name": "about-430",
+    "meanChannelDifference": 3.46,
+    "changedPixelsPercent": 2.74
+  },
+  {
+    "name": "work-430",
+    "meanChannelDifference": 5.65,
+    "changedPixelsPercent": 5.93
+  },
+  {
+    "name": "work-filter-430",
+    "meanChannelDifference": 5.25,
+    "changedPixelsPercent": 4.5
+  },
+  {
+    "name": "resume-430",
+    "meanChannelDifference": 6.3,
+    "changedPixelsPercent": 7.98
+  },
+  {
+    "name": "home-375",
+    "meanChannelDifference": 3.88,
+    "changedPixelsPercent": 3.32
+  },
+  {
+    "name": "about-375",
+    "meanChannelDifference": 4.29,
+    "changedPixelsPercent": 5.18
+  },
+  {
+    "name": "work-375",
+    "meanChannelDifference": 6.03,
+    "changedPixelsPercent": 6.61
+  },
+  {
+    "name": "work-filter-375",
+    "meanChannelDifference": 5.5,
+    "changedPixelsPercent": 4.98
+  },
+  {
+    "name": "resume-375",
+    "meanChannelDifference": 7.34,
+    "changedPixelsPercent": 8.48
+  },
+  {
+    "name": "project-halden",
+    "meanChannelDifference": 3.68,
+    "changedPixelsPercent": 3.09
+  },
+  {
+    "name": "project-halden-results",
+    "meanChannelDifference": 7.96,
+    "changedPixelsPercent": 10.75
+  },
+  {
+    "name": "project-halden-mobile",
+    "meanChannelDifference": 4.52,
+    "changedPixelsPercent": 3.32
+  },
+  {
+    "name": "project-pulse",
+    "meanChannelDifference": 3.37,
+    "changedPixelsPercent": 2.9
+  },
+  {
+    "name": "project-pulse-results",
+    "meanChannelDifference": 8.64,
+    "changedPixelsPercent": 12.36
+  },
+  {
+    "name": "project-pulse-mobile",
+    "meanChannelDifference": 4.7,
+    "changedPixelsPercent": 3.84
+  },
+  {
+    "name": "project-nacre",
+    "meanChannelDifference": 3.58,
+    "changedPixelsPercent": 3.06
+  },
+  {
+    "name": "project-nacre-results",
+    "meanChannelDifference": 7.82,
+    "changedPixelsPercent": 10.47
+  },
+  {
+    "name": "project-nacre-mobile",
+    "meanChannelDifference": 4.8,
+    "changedPixelsPercent": 4.33
+  },
+  {
+    "name": "project-kiln-co",
+    "meanChannelDifference": 3.13,
+    "changedPixelsPercent": 2.24
+  },
+  {
+    "name": "project-kiln-co-results",
+    "meanChannelDifference": 8,
+    "changedPixelsPercent": 12.31
+  },
+  {
+    "name": "project-kiln-co-mobile",
+    "meanChannelDifference": 4.79,
+    "changedPixelsPercent": 4.29
+  },
+  {
+    "name": "project-orbit",
+    "meanChannelDifference": 3.3,
+    "changedPixelsPercent": 3.31
+  },
+  {
+    "name": "project-orbit-results",
+    "meanChannelDifference": 7.88,
+    "changedPixelsPercent": 13.03
+  },
+  {
+    "name": "project-orbit-mobile",
+    "meanChannelDifference": 5.01,
+    "changedPixelsPercent": 4.78
+  }
+]

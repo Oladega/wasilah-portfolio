@@ -1,0 +1,66 @@
+.desktop {
+  position: relative;
+  min-height: 100vh;
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+.wallpaper {
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+  pointer-events: none;
+}
+.menu {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 30;
+  height: var(--menu-height);
+  background: rgba(38, 23, 42, 0.6);
+  backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px 0 18px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.menuRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.menu :global(.sound-toggle) {
+  height: 22px;
+  width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: transparent;
+  gap: 6px;
+}
+.menu :global(.sound-toggle:hover) {
+  background: rgba(255, 255, 255, 0.14);
+}
+.menu :global(.equalizer) {
+  font-size: 9px;
+  color: #b9d5ff;
+}
+@media (max-width: 809.98px) {
+  .desktop {
+    min-height: 100vh;
+    height: auto;
+    overflow: hidden;
+  }
+  .menu {
+    padding: 0 12px 0 14px;
+  }
+  .menu :global(.clock-date) {
+    display: none;
+  }
+}
+
+@media (max-width: 809.98px) { .wallpaper { object-position: 78% center; } }
