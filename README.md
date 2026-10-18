@@ -76,6 +76,7 @@ npm run test:navigation
 npm run test:pdf-media
 npm run test:about-content
 npm run test:design-update
+npm run test:welcome
 ```
 
 The Playwright scripts use installed Google Chrome on macOS by default. Set `CHROME_PATH` to a Chromium executable on another system, and `BASE_URL` to test a different preview server. No browser download is necessary. Start the site before running browser tests. Smoke tests cover all six widths, overflow, window navigation/closing, filters, project routes and section scrolling, résumé download, music and reduced motion.

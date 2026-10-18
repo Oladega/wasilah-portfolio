@@ -29,3 +29,7 @@ The clock and impact metrics now also use DM Serif Display through the shared nu
 ## Project mobile controls and capability list update
 
 What I do is back to plain bullet lists with bold category headings, in two columns on desktop and one on mobile. The tools retain their pill styling. The About photo is 80vw on mobile, aligned with the left text edge. Project traffic-light circles are hidden on mobile, while the back link displays Works on both desktop and mobile. The TL;DR portfolio download link has been removed from every project; the full portfolio download remains available in the Work folder.
+
+## Opaque first-visit loading screen
+
+The first-visit intro uses a solid plum background and remains fully opaque for 2.2 seconds, followed by a 520ms dissolve (2.72 seconds total). The name appears with a subtle entrance animation and a continuous ring spinner. A pre-paint session check prevents the home screen flashing before the intro and skips repeat intros on navigation/reload. The heading font is preloaded. The overlay intercepts pointer input until dismissal, respects reduced motion and remains skipped for direct project entry. Animation completion drives removal, with a timer fallback for interrupted animations. Verified with `npm run test:welcome`.

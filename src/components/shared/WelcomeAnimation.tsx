@@ -1,30 +1,41 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { siteConfig } from "@/data/site";
 import styles from "./WelcomeAnimation.module.css";
+
 let welcomeSeen = false;
 export function WelcomeAnimation({ skip = false }: { skip?: boolean }) {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(!skip);
+  const finish = useCallback(() => {
+    document.documentElement.dataset.portfolioWelcome = "seen";
+    setVisible(false);
+  }, []);
+
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
+    let fallback: ReturnType<typeof setTimeout> | undefined;
     const frame = requestAnimationFrame(() => {
-      if (welcomeSeen) return;
+      const shouldPlay = !welcomeSeen && !skip &&
+        document.documentElement.dataset.portfolioWelcome === "show";
       welcomeSeen = true;
-      try {
-        if (sessionStorage.getItem("portfolio-welcome-seen")) return;
-        sessionStorage.setItem("portfolio-welcome-seen", "1");
-      } catch { /* Keep navigation usable when browser storage is unavailable. */ }
-      if (skip || window.location.hash === "#work") return;
-      setVisible(true);
-      timer = setTimeout(() => setVisible(false), 1800);
+      try { sessionStorage.setItem("portfolio-welcome-seen", "1"); }
+      catch { /* The in-memory flag still prevents repeat animations. */ }
+      if (!shouldPlay) { finish(); return; }
+      // Animation completion controls dismissal; this also handles interrupted animations.
+      fallback = setTimeout(finish, 3000);
     });
-    return () => { cancelAnimationFrame(frame); clearTimeout(timer); };
-  }, [skip]);
+    return () => { cancelAnimationFrame(frame); clearTimeout(fallback); };
+  }, [skip, finish]);
+
   if (!visible) return null;
   return (
-    <div className={styles.welcome} aria-hidden="true">
+    <div
+      className={styles.welcome}
+      role="status"
+      aria-label={`Loading ${siteConfig.name}’s portfolio`}
+      onAnimationEnd={(event) => { if (event.target === event.currentTarget) finish(); }}
+    >
       <p>{siteConfig.name}</p>
-      <span className={styles.spinner} />
+      <span className={styles.spinner} aria-hidden="true" />
     </div>
   );
 }
