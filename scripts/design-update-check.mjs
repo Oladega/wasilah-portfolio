@@ -42,8 +42,8 @@ for (const width of [1440,1024,768,430,375]) {
  await page.getByRole('button',{name:'Mute background music',exact:true}).waitFor();
  await page.waitForTimeout(1000);
  const audio=await page.evaluate(()=>({src:window.__testAudio.currentSrc,time:window.__testAudio.currentTime,duration:window.__testAudio.duration,paused:window.__testAudio.paused}));
- assert.ok(audio.src.endsWith('piano-gymnopedie.mp3'));assert.ok(audio.time>0);assert.ok(audio.duration>180);assert.equal(audio.paused,false);
+ assert.ok(audio.src.endsWith('jazzy-amapiano-bounce.m4a'));assert.ok(audio.time>0);assert.ok(audio.duration>49 && audio.duration<52);assert.equal(audio.paused,false);
  await page.getByRole('button',{name:'Mute background music',exact:true}).click();
 }
 assert.deepEqual(errors,[]);await browser.close();
-console.log('Passed: Floral wallpaper, no dock, expanded About with one uncropped photo below 80% width, complete Contact links, actual solo piano playback and five responsive layouts.');
+console.log('Passed: Floral wallpaper, no dock, expanded About with one uncropped photo below 80% width, complete Contact links, actual amapiano playback and five responsive layouts.');

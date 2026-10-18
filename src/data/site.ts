@@ -22,7 +22,7 @@ export const siteConfig = {
     filename: "Wasilat-Atilade-Resume.pdf",
     pages: ["/documents/resume-1.png", "/documents/resume-2.png"],
   },
-  audio: "/audio/piano-gymnopedie.mp3",
+  audio: "/audio/jazzy-amapiano-bounce.m4a",
   about: {
     title: "Hi, I’m Wasilah.",
     paragraphs: [
@@ -60,12 +60,12 @@ export const siteConfig = {
     ],
     tools: [
       "Chat GPT",
-      "Claude Design",
+      "Cloud AI",
       "Canva",
       "Figma",
       "Capcut",
       "Google workspaces",
-      "Microsoft office suit",
+      "Microsoft Office Suite",
       "Notion",
     ],
     portrait: image("NZPMNGX6U6yZRWTpTTs7ZeCDmk"),

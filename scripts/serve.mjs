@@ -13,6 +13,7 @@ const types = {
   ".woff2": "font/woff2",
   ".ttf": "font/ttf",
   ".mp3": "audio/mpeg",
+  ".m4a": "audio/mp4",
   ".ogg": "audio/ogg",
   ".webp": "image/webp",
   ".pdf": "application/pdf",

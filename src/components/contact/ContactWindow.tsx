@@ -18,6 +18,7 @@ export function ContactWindow({ onClose }: { onClose: () => void }) {
         <span className={styles.icon}>{item.short || <Icon name={item.icon} size={24} />}</span>
         <span className={styles.label}><strong>{item.title}</strong><span>{item.detail}</span></span><span aria-hidden="true">↗</span>
       </a>)}</nav>
+      <p className={styles.musicCredit}>Music: <a href="https://budgetpixel.com/background-music/jazzy-amapiano-bounce-cc957138" target="_blank" rel="noopener noreferrer">Jazzy Amapiano Bounce by BudgetPixel AI</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Compressed and looped.</p>
     </div>
   </WindowFrame>;
 }

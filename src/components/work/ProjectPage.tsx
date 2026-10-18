@@ -133,7 +133,6 @@ export function ProjectPage({ project }: { project: Project }) {
                     <a href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`View full image: ${photo.caption}`}>
                       <Image src={photo.src} alt={photo.caption} width={photo.width} height={photo.height} sizes="(max-width:809px) 90vw, 45vw" />
                     </a>
-                    <figcaption>{photo.caption}</figcaption>
                   </figure>
                 ))}
               </div>

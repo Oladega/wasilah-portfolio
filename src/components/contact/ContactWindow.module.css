@@ -14,3 +14,6 @@
 .label strong { font-size: 15px; font-weight: 500; line-height: 1.45; }
 .label > span { font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; color: #e1eafa; }
 @media (max-width: 809.98px) { .window { height: calc(100dvh - 100px); } .content { padding: 26px 22px 32px; } .content h2 { font-size: 42px; } .links { grid-template-columns: 1fr; } .links a { padding: 16px; } }
+
+.musicCredit { margin-top: 26px; font-size: 11px; line-height: 1.7; color: #ced8e8; }
+.musicCredit a { text-decoration: underline; text-underline-offset: 3px; }
