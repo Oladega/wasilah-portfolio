@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
+import { portfolioMetadata } from "@/lib/metadata";
 import "./globals.css";
-export const metadata: Metadata = {
-  title: "Mira Alvarez — Brand & Product Designer",
-  description:
-    "Portfolio of Atilade Wasilat — marketing, social media, and events.",
-};
+export const metadata: Metadata = portfolioMetadata();
 export default function RootLayout({
   children,
 }: {
