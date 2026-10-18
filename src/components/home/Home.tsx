@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { WelcomeAnimation } from "@/components/shared/WelcomeAnimation";
-import { Hero, AvailabilityStatus } from "./Hero";
+import { Hero, LocationStatus } from "./Hero";
 import { DesktopIcons } from "./DesktopIcons";
 import { AboutWindow } from "@/components/about/AboutWindow";
 import { WorkWindow } from "@/components/work/WorkWindow";
@@ -32,7 +32,7 @@ export function Home({ project }: { project?: Project }) {
     <>
       <div className={styles.home}>
         <DesktopIcons active={active} onOpen={open} />
-        <AvailabilityStatus />
+        <LocationStatus />
         <Hero onOpenWork={() => open("work")} />
       </div>
       {(active || project) && (

@@ -8,7 +8,7 @@ export const siteConfig = {
       "I create, coordinate and promote experiences that connect people.",
   },
   specialties: ["Marketing", "Social Media", "Events"],
-  availability: "Available for projects",
+  availability: "Open to work",
   timezone: "auto",
   location: "auto",
   wallpaper: {

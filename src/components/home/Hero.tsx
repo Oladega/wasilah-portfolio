@@ -1,9 +1,9 @@
 import { siteConfig } from "@/data/site";
 import { LocalClock } from "@/components/shared/LocalClock";
 import styles from "./Home.module.css";
-export function AvailabilityStatus() {
+export function LocationStatus() {
   return (
-    <aside className={styles.status} aria-label="Location and availability">
+    <aside className={styles.status} aria-label="Local time and location">
       <div className={styles.locationTime}>
         <p className={styles.location}>
           <LocalClock zone />
@@ -12,10 +12,7 @@ export function AvailabilityStatus() {
           <LocalClock />
         </div>
       </div>
-      <div className={styles.available}>
-        <i />
-        {siteConfig.availability}
-      </div>
+      <div className={styles.available}><i />{siteConfig.availability}</div>
     </aside>
   );
 }

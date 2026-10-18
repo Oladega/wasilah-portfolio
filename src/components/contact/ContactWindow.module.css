@@ -4,8 +4,6 @@
 .content h2 { font: 400 54px/1.12 var(--font-display); margin-bottom: 20px; }
 .content h2 em { font-style: italic; }
 .intro { font-size: 17px; line-height: 1.7; color: #f2f5ff; max-width: 550px; }
-.availability { display: flex; align-items: center; gap: 8px; color: #e6efff; font-size: 13px; margin: 22px 0 26px; }
-.availability i { width: 7px; height: 7px; border-radius: 50%; background: #c8ee9c; }
 .links { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .links a { display: flex; align-items: center; gap: 12px; padding: 20px 16px; border: 1px solid #ffffff1c; background: #07152b40; border-radius: 14px; transition: background .2s, border-color .2s; }
 .links a:hover { background: #07152b70; border-color: #ffffff3a; }
@@ -17,3 +15,6 @@
 
 .musicCredit { margin-top: 26px; font-size: 11px; line-height: 1.7; color: #ced8e8; }
 .musicCredit a { text-decoration: underline; text-underline-offset: 3px; }
+
+.availability { display: flex; align-items: center; gap: 8px; color: #e6efff; font-size: 13px; margin: 22px 0 26px; }
+.availability i { width: 7px; height: 7px; border-radius: 50%; background: #c8ee9c; }
