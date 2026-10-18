@@ -16,7 +16,6 @@ export function ProjectCard({ project }: { project: Project }) {
         <span className={styles.openPill}>Open ↵</span>
       </div>
       <h3 className={styles.cardTitle}>
-        <i />
         <span>{project.title}</span>
       </h3>
       <p className={styles.category}>{project.category}</p>
