@@ -69,7 +69,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
     .click();
   const contact = p.getByRole("dialog", { name: "Contact Me", exact: true });
   await contact.waitFor();
-  assert.equal(await contact.getByRole("navigation", { name: "Contact options" }).getByRole("link").count(), 4);
+  assert.equal(await contact.getByRole("navigation", { name: "Contact options" }).getByRole("link").count(), 3);
   await p.keyboard.press("Escape");
   await p.getByRole("navigation", { name: "Portfolio", exact: true }).getByRole("button", { name: width < 810 ? "Résumé" : "Résumé.pdf", exact: true }).click();
   await p.getByRole("dialog", { name: "Résumé.pdf", exact: true }).waitFor();

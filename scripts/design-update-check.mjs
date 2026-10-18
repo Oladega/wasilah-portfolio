@@ -32,7 +32,7 @@ for (const width of [1440,1024,768,430,375]) {
  const contact=page.getByRole('dialog',{name:'Contact Me',exact:true});await contact.waitFor();
  assert.equal(await contact.getByRole('heading',{name:/Have something/}).count(),1);
  const links=contact.getByRole('navigation',{name:'Contact options'}).getByRole('link');
- assert.deepEqual(await links.evaluateAll(items=>items.map(item=>item.getAttribute('href'))),['https://www.linkedin.com/in/wasilat-atilade-2b54a823a/','mailto:wasilahatilade01@gmail.com','https://wa.me/2348142438558','https://x.com/TheWasilah']);
+ assert.deepEqual(await links.evaluateAll(items=>items.map(item=>item.getAttribute('href'))),['https://www.linkedin.com/in/wasilat-atilade-2b54a823a/','mailto:wasilahatilade01@gmail.com','https://x.com/TheWasilah']);
  assert.equal(await contact.locator('iframe').count(),0);
  assert.equal(await contact.getByText('Résumé.pdf',{exact:true}).count(),0);
  await page.screenshot({path:`docs/screenshots/design-update/contact-${width}.png`});
