@@ -207,6 +207,9 @@
     transform: translateY(0);
   }
 }
+@media (min-width: 810px) {
+  .icons { margin-top: 62px; }
+}
 @media (min-width: 810px) and (max-width: 1199.98px) {
   .headline { font-size: 44px; width: calc((100vw - 300px) * 0.8); }
   .greeting { gap: 22px; }
