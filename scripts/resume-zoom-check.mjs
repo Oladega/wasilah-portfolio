@@ -13,7 +13,7 @@ async function ready(){await page.waitForFunction(()=>[...document.querySelector
 function focal(root){const viewport=root.getBoundingClientRect(),center=viewport.top+root.clientHeight/2;const pages=[...root.querySelectorAll('[data-resume-page]')];const target=pages.reduce((best,page)=>{const r=page.getBoundingClientRect(),b=best?.getBoundingClientRect();return !b||Math.abs(r.top+r.height/2-center)<Math.abs(b.top+b.height/2-center)?page:best;},null);const r=target.getBoundingClientRect();return {page:Number(target.dataset.resumePage),y:(center-r.top)/r.height,scrollTop:root.scrollTop};}
 for(const width of [1440,1024,768,430,320]){
  await page.setViewportSize({width,height:1000});await page.goto(base);
- const nav=page.getByRole('navigation',{name:'Portfolio',exact:true});await nav.getByRole('button').nth(2).click();
+ const nav=page.getByRole('navigation',{name:'Portfolio',exact:true});await nav.getByRole('link').nth(2).click();
  const dialog=page.getByRole('dialog',{name:'Résumé.pdf',exact:true});await dialog.waitFor();
  const viewer=dialog.getByRole('region',{name:'Résumé document',exact:true});
  await ready();assert.equal(await page.getByRole('slider',{name:'Document zoom',exact:true}).inputValue(),'115');
@@ -44,12 +44,12 @@ for(const width of [1440,1024,768,430,320]){
  }
  await setZoom(115);await ready();
  if(width===1440||width===430)await page.screenshot({path:`/tmp/resume-zoom-${width}.png`});
- await shown(dialog.getByRole('button',{name:'Close Résumé',exact:true})).click();await nav.getByRole('button').nth(2).click();await ready();assert.equal(await slider.inputValue(),'115');
+ await shown(dialog.getByRole('button',{name:'Close Résumé',exact:true})).click();await nav.getByRole('link').nth(2).click();await ready();assert.equal(await slider.inputValue(),'115');
  const download=page.waitForEvent('download');await shown(dialog.getByRole('link',{name:'Download ↓',exact:true})).click();assert.equal((await download).suggestedFilename(),'Wasilat-Atilade-Resume.pdf');
  await page.keyboard.press('Escape');
 }
 // Download remains available on load failure; retry recovers the original document.
 await page.context().route('**/documents/qVI4VexACDjeL2UOQF9oibjSXo.pdf',route=>route.fulfill({status:503,body:'Temporarily unavailable'}));
-await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button').nth(2).click();await page.getByRole('dialog').getByRole('alert').waitFor();
+await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('link').nth(2).click();await page.getByRole('dialog').getByRole('alert').waitFor();
 await page.context().unroute('**/documents/qVI4VexACDjeL2UOQF9oibjSXo.pdf');await page.getByRole('button',{name:'Try again',exact:true}).click();await ready();
 assert.deepEqual(errors,[]);await browser.close();console.log('Passed exact PDF hash, 50/75/100/115/150/200% zoom, crisp bounded rendering, document-only scaling, focal preservation, multipage scrolling, keyboard, download, error/retry and window lifecycle across five layouts.');

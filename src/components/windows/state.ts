@@ -9,8 +9,10 @@ export type WindowState = {
 };
 export type ManagerState = { windows: Record<WindowId, WindowState>; order: WindowId[]; activeId: WindowId | null };
 const closedWindow = (transitionId = 0): WindowState => ({ visibilityState: 'closed', sizeMode: 'normal', sizeTransition: null, position: { x: 0, y: 0 }, transitionId });
-export function initialWindowState(): ManagerState {
-  return { windows: Object.fromEntries(windowIds.map(id => [id, closedWindow()])) as ManagerState['windows'], order: [], activeId: null };
+export function initialWindowState(initialId?: WindowId): ManagerState {
+  const state: ManagerState = { windows: Object.fromEntries(windowIds.map(id => [id, closedWindow()])) as ManagerState['windows'], order: [], activeId: null };
+  if (initialId) { state.windows[initialId].visibilityState = 'open'; state.order = [initialId]; state.activeId = initialId; }
+  return state;
 }
 export type Command = 'open' | 'close' | 'maximize' | 'unmaximize' | 'focus';
 export type Action = { type: Command; id: WindowId; token?: number; exclusive?: boolean } | { type: 'settle'; id: WindowId; token: number } | { type: 'position'; id: WindowId; position: WindowState['position'] } | { type: 'compact' };

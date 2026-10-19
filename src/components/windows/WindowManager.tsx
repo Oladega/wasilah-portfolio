@@ -6,8 +6,8 @@ import { windowRegistry } from './registry';
 import { elementRectangle, visibleRectangle } from './windowTransitionUtils';
 import { runWindowTransition, type TransitionPlan, type RunningTransition } from './WindowTransitionLayer';
 import { desktopSnapshot, subscribeDesktop, serverDesktopSnapshot } from './desktopMode';
-function useManagerValue() {
-  const [state, dispatch] = useReducer(windowReducer, undefined, initialWindowState);
+function useManagerValue(initialId?: WindowId) {
+  const [state, dispatch] = useReducer(windowReducer, initialId, initialWindowState);
   const desktop = useSyncExternalStore(subscribeDesktop, desktopSnapshot, serverDesktopSnapshot);
   useLayoutEffect(() => { if (!desktop) dispatch({ type: 'compact' }); }, [desktop]);
   const latest = useRef(state);
@@ -96,8 +96,8 @@ function useManagerValue() {
 }
 const ManagerContext = createContext<ReturnType<typeof useManagerValue> | null>(null);
 const InstanceContext = createContext<WindowId | null>(null);
-export function WindowManagerProvider({ children }: { children: React.ReactNode }) {
-  return <ManagerContext.Provider value={useManagerValue()}>{children}</ManagerContext.Provider>;
+export function WindowManagerProvider({ children, initialId }: { children: React.ReactNode; initialId?: WindowId }) {
+  return <ManagerContext.Provider value={useManagerValue(initialId)}>{children}</ManagerContext.Provider>;
 }
 export const WindowInstanceProvider = InstanceContext.Provider;
 export function useWindowManager() {

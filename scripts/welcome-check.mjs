@@ -8,7 +8,7 @@ for (const width of [1440, 375]) {
  const context = await browser.newContext({ viewport: { width, height: 932 } });
  const page = await context.newPage(); const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base, { waitUntil: 'domcontentloaded' });
- const loader=page.getByRole('status',{name:'Loading Atilade Wasilat’s portfolio',exact:true});
+ const loader=page.getByRole('status',{name:'Loading Wasilat Atilade’s portfolio',exact:true});
  await loader.waitFor({state:'visible'});
  const initial=await loader.evaluate(el=>{const s=getComputedStyle(el);return {opacity:s.opacity,color:s.backgroundColor,z:s.zIndex,delay:s.animationDelay,duration:s.animationDuration};});
  assert.deepEqual(initial,{opacity:'1',color:'rgb(73, 53, 68)',z:'200',delay:'2.2s',duration:'0.52s'});
@@ -19,7 +19,7 @@ for (const width of [1440, 375]) {
  await page.waitForFunction(()=>{const el=document.querySelector('[role="status"]');if(!el)return false;const opacity=+getComputedStyle(el).opacity;return opacity>0 && opacity<1;});
  await loader.waitFor({state:'detached'});
  assert.equal(await page.evaluate(()=>sessionStorage.getItem('portfolio-welcome-seen')),'1');
- await page.getByRole('button',{name:'My Work',exact:true}).click();await page.getByRole('dialog',{name:'Work',exact:true}).locator('a[href="/work/pulse"]').click();await page.waitForURL('**/work/pulse');await page.getByRole('link',{name:'Back to all work'}).click();await page.getByRole('dialog',{name:'Work',exact:true}).waitFor();assert.equal(await page.getByRole('status').count(),0);
+ await page.getByRole('link',{name:'My Work',exact:true}).click();await page.getByRole('dialog',{name:'Work',exact:true}).locator('a[href="/work/pulse"]').click();await page.waitForURL('**/work/pulse');await page.getByRole('link',{name:'Works — Back to all work'}).click();await page.getByRole('dialog',{name:'Work',exact:true}).waitFor();assert.equal(await page.getByRole('status').count(),0);
  await page.reload();await page.waitForTimeout(150);assert.equal(await page.getByRole('status').count(),0);assert.deepEqual(errors,[]);
  await context.close();
 }

@@ -18,7 +18,9 @@ export function Home({ project }: { project?: Project }) {
   const openedProject = useRef<string | null>(null);
   const workVisibility = manager.windows.work.visibilityState;
   useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get("window");
     if (project || window.location.hash === "#work") openWindow("work");
+    else if (requested && ["about", "work", "resume", "contact"].includes(requested)) openWindow(requested as WindowId);
   }, [project, openWindow]);
   useEffect(() => {
     if (!project) { openedProject.current = null; return; }
@@ -37,7 +39,7 @@ export function Home({ project }: { project?: Project }) {
       <div className={styles.home} data-desktop-background>
         <DesktopIcons active={active} onOpen={open} />
         <LocationStatus />
-        <Hero onOpenWork={launcher => open("work", launcher)} />
+        <Hero subordinate={!!project} onOpenWork={launcher => open("work", launcher)} />
       </div>
       {manager.order.length > 0 && <div className={styles.modalLayer} style={{ zIndex: 109 }}><button className={styles.backdrop} aria-label="Dismiss overlay" tabIndex={-1} onClick={close} /></div>}
       {manager.order.map(id => {

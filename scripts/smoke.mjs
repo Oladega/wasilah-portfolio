@@ -23,7 +23,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
   );
   assert.match(await p.locator("time").last().innerText(), /^\d{2}:\d{2}$/);
   await p
-    .getByRole("button", {
+    .getByRole("link", {
       name: width < 810 ? "About Me" : "About Wasilah",
       exact: true,
     })
@@ -32,7 +32,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
   await p.keyboard.press("Escape");
   await p.getByRole("dialog").waitFor({ state: "hidden" });
   assert.equal(await p.getByRole("dialog").count(), 0);
-  await p.getByRole("button", { name: "My Work", exact: true }).click();
+  await p.getByRole("link", { name: "My Work", exact: true }).click();
   const work = p.getByRole("dialog", { name: "Work", exact: true });
   await work.waitFor();
   assert.equal(await work.locator('a[href^="/work/"]').count(), 5);
@@ -63,7 +63,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
     .waitFor();
   await p.goto(base);
   await p
-    .getByRole("button", {
+    .getByRole("link", {
       name: width < 810 ? "Contact me" : "Contact Me",
       exact: true,
     })
@@ -73,7 +73,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
   assert.equal(await contact.getByRole("navigation", { name: "Contact options" }).getByRole("link").count(), 3);
   await p.keyboard.press("Escape");
   await p.getByRole("dialog").waitFor({ state: "hidden" });
-  await p.getByRole("navigation", { name: "Portfolio", exact: true }).getByRole("button", { name: width < 810 ? "Résumé" : "Résumé.pdf", exact: true }).click();
+  await p.getByRole("navigation", { name: "Portfolio", exact: true }).getByRole("link", { name: width < 810 ? "Résumé" : "Résumé.pdf", exact: true }).click();
   await p.getByRole("dialog", { name: "Résumé.pdf", exact: true }).waitFor();
   const download = p.waitForEvent("download");
   await p.getByRole("link", { name: "Download ↓", exact: true }).last().click();

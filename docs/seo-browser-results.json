@@ -1,0 +1,69 @@
+{
+  "note": "Local lab resource/event observations, not field INP or a Core Web Vitals certification.",
+  "routes": [
+    {
+      "path": "/",
+      "cls": 0.00014851014994232987,
+      "scriptTransferBytes": 215552,
+      "scriptEncodedBytes": 213152,
+      "sampledInteractionDurationsMs": [
+        72,
+        72,
+        72,
+        32,
+        24,
+        24,
+        24,
+        24,
+        16,
+        16,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        24,
+        16
+      ],
+      "runtimeErrors": []
+    },
+    {
+      "path": "/about",
+      "cls": 0,
+      "scriptTransferBytes": 143566,
+      "scriptEncodedBytes": 141766,
+      "runtimeErrors": []
+    },
+    {
+      "path": "/work",
+      "cls": 0,
+      "scriptTransferBytes": 143566,
+      "scriptEncodedBytes": 141766,
+      "runtimeErrors": []
+    },
+    {
+      "path": "/resume",
+      "cls": 0.00030707785467128026,
+      "scriptTransferBytes": 143566,
+      "scriptEncodedBytes": 141766,
+      "runtimeErrors": []
+    },
+    {
+      "path": "/contact",
+      "cls": 0.00021475951557093427,
+      "scriptTransferBytes": 143566,
+      "scriptEncodedBytes": 141766,
+      "runtimeErrors": []
+    },
+    {
+      "path": "/work/pulse",
+      "cls": 0.00041155397923875437,
+      "scriptTransferBytes": 215552,
+      "scriptEncodedBytes": 213152,
+      "runtimeErrors": []
+    }
+  ]
+}

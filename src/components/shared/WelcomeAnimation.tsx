@@ -26,7 +26,7 @@ export function WelcomeAnimation({ skip = false }: { skip?: boolean }) {
     return () => { cancelAnimationFrame(frame); clearTimeout(fallback); };
   }, [skip, finish]);
 
-  if (!visible) return null;
+  if (!visible || skip) return null;
   return (
     <div
       className={styles.welcome}

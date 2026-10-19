@@ -2,11 +2,7 @@
 import { WindowFrame } from "@/components/shared/WindowFrame";
 import { Icon } from "@/components/shared/Icon";
 import styles from "./ContactWindow.module.css";
-const contacts = [
-  { title: "Message me on LinkedIn", detail: "Connect and talk about opportunities", href: "https://www.linkedin.com/in/wasilat-atilade-2b54a823a/", icon: "linkedin", short: "in" },
-  { title: "Send me an email", detail: "wasilahatilade01@gmail.com", href: "mailto:wasilahatilade01@gmail.com", icon: "mail", short: "" },
-  { title: "Follow me on Twitter", detail: "@TheWasilah", href: "https://x.com/TheWasilah", icon: "twitter", short: "𝕏" },
-];
+import { contacts } from "@/data/profile";
 export function ContactWindow({ onClose }: { onClose: () => void }) {
   return <WindowFrame onClose={onClose} className={styles.window}>
     <div className={styles.content}>

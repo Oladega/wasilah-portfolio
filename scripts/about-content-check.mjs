@@ -8,7 +8,7 @@ await mkdir('docs/screenshots/about-content', { recursive: true });
 for (const width of [1440,1024,430,375]) {
  await page.setViewportSize({width,height:932});
  await page.goto(process.env.BASE_URL || 'http://localhost:3001');
- await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button',{name:width<810?'About Me':'About Wasilah',exact:true}).click();
+ await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('link',{name:width<810?'About Me':'About Wasilah',exact:true}).click();
  const about=page.getByRole('dialog',{name:'About Wasilah'});
  const capabilities=about.getByRole('region',{name:'What I do',exact:true});
  assert.equal(await capabilities.locator('li').count(),19);
@@ -27,7 +27,7 @@ for (const width of [1440,1024,430,375]) {
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  assert.equal(await capabilities.evaluate(el=>el.scrollWidth>el.clientWidth+1),false);
  await page.keyboard.press('Escape');
- await page.getByRole('button',{name:'My Work',exact:true}).click();
+ await page.getByRole('link',{name:'My Work',exact:true}).click();
  const work=page.getByRole('dialog',{name:'Work',exact:true});
  assert.equal(await work.locator('a[href^="/work/"]').count(),5);
  assert.equal(await work.getByText('Capabilities & impact',{exact:true}).count(),0);

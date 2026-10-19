@@ -7,7 +7,7 @@ const page=await browser.newPage();const errors=[];page.on('pageerror',e=>errors
 const shown=locator=>locator.filter({visible:true}).first();
 const settled=()=>page.waitForFunction(()=>!document.querySelector('[data-window-animation-shell]')&&[...document.querySelectorAll('[role="dialog"]')].filter(e=>e.getClientRects().length).every(e=>!e.dataset.windowTransition&&getComputedStyle(e).opacity==='1'));
 const shell=kind=>page.locator(`[data-window-animation-shell="${kind}"]`);
-const icons=page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button');
+const icons=page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('link');
 const labels=['About Me','My Work','Résumé','Contact Me'];
 async function captureFrame(kind) {
  await page.evaluate(()=>[...document.querySelectorAll('[data-window-animation-shell],[data-window-transition]')].flatMap(e=>e.getAnimations()).forEach(a=>{a.pause();a.currentTime=Number(a.effect.getTiming().duration)*.5}));
@@ -17,7 +17,7 @@ async function captureFrame(kind) {
 
 await mkdir('docs/screenshots/window-motion',{recursive:true});
 await page.addInitScript(()=>document.addEventListener('click',event=>{
- const button=event.target.closest?.('nav[aria-label="Portfolio"] button');
+ const button=event.target.closest?.('nav[aria-label="Portfolio"] a');
  if(button) window.__launchRect=button.querySelector('img').getBoundingClientRect().toJSON();
 },true));
 for(const width of [1440,768,430]){

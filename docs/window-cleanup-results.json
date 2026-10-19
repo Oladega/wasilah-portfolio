@@ -40,5 +40,89 @@
     "windows": 4,
     "controls": "pass",
     "outsideClose": "pass"
+  },
+  {
+    "engine": "firefox",
+    "width": 1440,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "firefox",
+    "width": 1280,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "firefox",
+    "width": 1024,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "firefox",
+    "width": 768,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "firefox",
+    "width": 430,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "firefox",
+    "width": 375,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "webkit",
+    "width": 1024,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "webkit",
+    "width": 768,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "webkit",
+    "width": 430,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "webkit",
+    "width": 375,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
   }
 ]

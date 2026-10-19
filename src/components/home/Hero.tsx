@@ -16,7 +16,8 @@ export function LocationStatus() {
     </aside>
   );
 }
-export function Hero({ onOpenWork }: { onOpenWork: (launcher: HTMLElement) => void }) {
+export function Hero({ onOpenWork, subordinate = false }: { onOpenWork: (launcher: HTMLElement) => void; subordinate?: boolean }) {
+  const Heading = subordinate ? "p" : "h1";
   return (
     <section className={styles.greeting} aria-label="Introduction">
       <div className={styles.specialties}>
@@ -28,11 +29,11 @@ export function Hero({ onOpenWork }: { onOpenWork: (launcher: HTMLElement) => vo
           </span>
         ))}
       </div>
-      <h1 className={styles.headline}>
+      <Heading className={styles.headline} aria-label={subordinate ? undefined : "Wasilat Atilade — Marketing, Events & Communications"}>
         <span>{siteConfig.hero.title}</span>
         <br />
         {siteConfig.hero.description}
-      </h1>
+      </Heading>
       <button className={styles.cta} onClick={event => onOpenWork(event.currentTarget)}>
         See my work <span>↵</span>
       </button>

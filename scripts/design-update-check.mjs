@@ -15,7 +15,7 @@ for (const width of [1440,1024,768,430,375]) {
  assert.equal(await page.getByRole('navigation',{name:'Social links',includeHidden:true}).count(),0);
  await page.screenshot({path:`docs/screenshots/design-update/home-${width}.png`});
  const nav=page.getByRole('navigation',{name:'Portfolio',exact:true});
- await nav.getByRole('button',{name:width<810?'About Me':'About Wasilah',exact:true}).click();
+ await nav.getByRole('link',{name:width<810?'About Me':'About Wasilah',exact:true}).click();
  const about=page.getByRole('dialog',{name:'About Wasilah',exact:true}); await about.waitFor();
  assert.equal(await about.locator('img').count(),1);
  await about.locator('img').evaluateAll(images=>Promise.all(images.map(image=>{image.loading='eager';return image.decode();})));
@@ -28,7 +28,7 @@ for (const width of [1440,1024,768,430,375]) {
  assert.equal(await about.locator('dt').count(),5);
  await page.screenshot({path:`docs/screenshots/design-update/about-${width}.png`});
  await page.keyboard.press('Escape');
- await nav.getByRole('button',{name:width<810?'Contact me':'Contact Me',exact:true}).click();
+ await nav.getByRole('link',{name:width<810?'Contact me':'Contact Me',exact:true}).click();
  const contact=page.getByRole('dialog',{name:'Contact Me',exact:true});await contact.waitFor();
  assert.equal(await contact.getByRole('heading',{name:/Have something/}).count(),1);
  const links=contact.getByRole('navigation',{name:'Contact options'}).getByRole('link');

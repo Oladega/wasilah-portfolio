@@ -15,9 +15,9 @@ for (const width of [1440, 1024, 430, 375]) {
     await page.locator('[class*="welcome"]').waitFor({ state: 'detached' });
   }
   const nav = page.locator('nav[aria-label="Portfolio"]');
-  const labels = await nav.locator('button').allTextContents();
+  const labels = await nav.locator('a').allTextContents();
   assert.equal(await page.getByRole('navigation', { name: 'Social links', includeHidden: true }).count(), 0);
-  await nav.getByRole('button', { name: 'My Work', exact: true }).click();
+  await nav.getByRole('link', { name: 'My Work', exact: true }).click();
   const work = page.getByRole('dialog', { name: 'Work', exact: true });
   await work.waitFor();
   await page.waitForTimeout(350);
@@ -28,8 +28,8 @@ for (const width of [1440, 1024, 430, 375]) {
   const project = page.getByRole('dialog', { name: 'Final Year Week ’26 project', exact: true });
   await project.waitFor();
   assert.equal(await page.getByRole('dialog').count(), 1);
-  assert.deepEqual(await nav.locator('button').allTextContents(), labels);
-  assert.equal(await page.getByRole('heading', { name: /Hi, I'm Wasilah/ }).count(), 1);
+  assert.deepEqual(await nav.locator('a').allTextContents(), labels);
+  assert.equal(await page.getByText("Hi, I'm Wasilah", {exact:true}).count(), 1);
   assert.equal(await page.getByText('Case Studies', { exact: true }).count(), 0);
   assert.equal(await page.getByText('Photos', { exact: true }).count(), 0);
   assert.equal(await page.getByText('Showreel.mov', { exact: true }).count(), 0);
@@ -39,7 +39,7 @@ for (const width of [1440, 1024, 430, 375]) {
   assert.ok(projectBounds.height >= bounds.height - 1);
   assert.equal(await page.locator('[class*="welcome"]').count(), 0);
   await page.screenshot({ path: `docs/screenshots/navigation-update/project-${width}.png` });
-  await page.getByRole('link', { name: 'Back to all work' }).click();
+  await page.getByRole('link', { name: 'Works — Back to all work' }).click();
   await page.waitForURL('**/#work');
   await work.waitFor();
   assert.equal(await page.getByRole('dialog').count(), 1);

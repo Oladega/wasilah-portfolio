@@ -8,7 +8,7 @@ const labels=['About Me','My Work','Résumé','Contact Me'];
 const shown=x=>x.filter({visible:true}).first();
 async function ready(page){await page.waitForFunction(()=>!document.querySelector('[data-window-animation-shell]')&&[...document.querySelectorAll('[role="dialog"]')].filter(e=>e.getClientRects().length).every(e=>!e.dataset.windowTransition&&getComputedStyle(e).opacity==='1'));}
 async function warm(page){
- const icons=page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button');
+ const icons=page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('link');
  for(let i=0;i<4;i++){await icons.nth(i).click();await page.getByRole('dialog').waitFor();await ready(page);if(i===2)await page.locator('[data-ready=true]').first().waitFor();await page.keyboard.press('Escape');await ready(page);}
 }
 const results={hardware:{cpu:os.cpus()[0]?.model,cores:os.cpus().length,arch:process.arch,platform:process.platform,memoryGiB:Math.round(os.totalmem()/1024**3)},browser:browser.version(),mode:'headless, production static export',profiles:[]};
@@ -26,7 +26,7 @@ for(const profile of [{name:'desktop-native',width:1440,height:900,rate:1},{name
   window.__stopWindowProfile=()=>{observer.disconnect();tasks?.disconnect();cancelAnimationFrame(handle);};performance.mark('portfolio-review:begin');
  });
  await cdp.send('Tracing.start',{categories:'devtools.timeline,disabled-by-default-devtools.timeline,disabled-by-default-devtools.timeline.frame,toplevel,blink.user_timing',transferMode:'ReturnAsStream'});
- const icons=page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button');
+ const icons=page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('link');
  for(let cycle=0;cycle<2;cycle++)for(const [index,label]of labels.entries()){
   await icons.nth(index).click();await page.getByRole('dialog').waitFor();await ready(page);
   if(index===2)await page.locator('[data-ready=true]').first().waitFor();

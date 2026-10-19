@@ -12,3 +12,8 @@ docs/screenshots/
 
 # Generated from the installed PDF.js version before dev/build.
 public/pdfjs/
+
+# Reproducible social cards and full local audit artifacts.
+public/og/
+docs/lighthouse/
+public/images/optimized/

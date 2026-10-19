@@ -1,9 +1,13 @@
 import http from "node:http";
+import {gzip as gzipCallback} from "node:zlib";
+import {promisify} from "node:util";
+const gzip = promisify(gzipCallback);
 import { readFile, stat } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 const root = resolve("out");
 const port = Number(process.env.PORT || 3000);
 const types = {
+  ".xml": "application/xml; charset=utf-8",
   ".html": "text/html; charset=utf-8",
   ".css": "text/css",
   ".js": "text/javascript",
@@ -40,9 +44,14 @@ http
           .then(() => index)
           .catch(() => file + ".html");
       } else if (!info && !extname(file)) file += ".html";
-      const data = await readFile(file);
+      let data = await readFile(file);
+      const compressed = /\b(?:gzip)\b/.test(req.headers["accept-encoding"] || "") && [".html", ".css", ".js", ".mjs", ".json", ".xml", ".txt", ".ttf"].includes(extname(file));
+      if (compressed) data = await gzip(data);
       res.writeHead(200, {
         "Content-Type": types[extname(file)] || "application/octet-stream",
+        "Vary": "Accept-Encoding",
+        ...(compressed ? {"Content-Encoding": "gzip"} : {}),
+        "Cache-Control": pathname.startsWith("/_next/static/") ? "public, max-age=31536000, immutable" : "public, max-age=0, must-revalidate",
       });
       res.end(req.method === "HEAD" ? undefined : data);
     } catch {

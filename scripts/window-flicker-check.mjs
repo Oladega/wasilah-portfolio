@@ -32,7 +32,7 @@ for(const engine of (process.env.REVIEW_BROWSERS||'chrome').split(',')){
    await shell.evaluate(el=>el.getAnimations().forEach(a=>a.play()));await settled();
   }
   for(const[index,label]of ['About Me','My Work','Résumé','Contact Me'].entries()){
-   await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button').nth(index).click();await frames('open',index);
+   await page.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('link').nth(index).click();await frames('open',index);
    const shown=x=>x.filter({visible:true}).first();
    if(index===2)await page.locator('[data-ready=true]').first().waitFor();
    if(index!==3&&width>=810){await shown(page.getByRole('button',{name:`Maximize ${label}`,exact:true})).click();await frames('maximize',index);await shown(page.getByRole('button',{name:`Restore ${label}`,exact:true})).click();await frames('unmaximize',index);}

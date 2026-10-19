@@ -1,7 +1,8 @@
+import { professionalProfile } from './profile';
 export const image = (id: string) => `/images/${id}.png`;
 export const siteConfig = {
-  name: "Atilade Wasilat",
-  projectBrand: "Atilade Wasilat",
+  name: professionalProfile.name,
+  projectBrand: professionalProfile.name,
   hero: {
     title: "Hi, I'm Wasilah",
     description:

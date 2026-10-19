@@ -8,7 +8,7 @@ for (const width of [1440, 430]) {
   await page.setViewportSize({ width, height: 932 });
   await page.goto(base);
   const nav = page.getByRole('navigation', { name: 'Portfolio', exact: true });
-  const actions = nav.getByRole('button');
+  const actions = nav.getByRole('link');
   for (let index = 0; index < 4; index++) {
     await actions.nth(index).click();
     assert.equal(await page.getByRole('dialog').count(), 1);

@@ -19,12 +19,12 @@ import styles from "./ProjectPage.module.css";
 export function ProjectPage({ project, onClose }: { project: Project; onClose?: () => void }) {
   const router = useRouter();
   const instance = useWindowInstance();
-  const dialog = useRef<HTMLElement>(null);
+  const dialog = useRef<HTMLDivElement>(null);
   const close = useCallback(() => onClose ? onClose() : router.push("/"), [router, onClose]);
   useWindowTransition(dialog);
   useDialogFocus(dialog, close, !instance || (isPresented(instance.state) && instance.manager.activeId === instance.id), !instance?.manager.desktop);
   const reduced = useReducedMotion();
-  const content = useRef<HTMLDivElement>(null);
+  const content = useRef<HTMLElement>(null);
   const index = projects.findIndex((p) => p.slug === project.slug);
   const next = projects[index + 1];
   const similar = projects
@@ -40,7 +40,7 @@ export function ProjectPage({ project, onClose }: { project: Project; onClose?: 
   }
   return (
     <>
-      <article
+      <div
         ref={dialog}
         tabIndex={-1}
         role="dialog"
@@ -55,7 +55,7 @@ export function ProjectPage({ project, onClose }: { project: Project; onClose?: 
           <div className={styles.trafficLights}><WindowControls title={project.title}
             onClose={close}
           /></div>
-          <Link href="/#work" className={styles.back} aria-label="Back to all work">
+          <Link href="/work" prefetch={false} onClick={event => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); router.push("/#work"); }} className={styles.back} aria-label="Works — Back to all work">
             ‹<span className={styles.backLabel}>&nbsp; Works</span>
           </Link>
           <h1>{project.title}</h1>
@@ -84,7 +84,7 @@ export function ProjectPage({ project, onClose }: { project: Project; onClose?: 
               </Link>
             )}
           </aside>
-          <div className={styles.content} ref={content}>
+          <article className={styles.content} ref={content}>
             <section id="overview" className={styles.overview}>
               <div className={styles.overviewStack}>
                 <div className={styles.heroImage}>
@@ -158,9 +158,9 @@ export function ProjectPage({ project, onClose }: { project: Project; onClose?: 
                 ))}
               </div>
             </section>
-          </div>
+          </article>
         </div>
-      </article>
+      </div>
     </>
   );
 }

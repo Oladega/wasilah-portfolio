@@ -20,7 +20,8 @@ export function DesktopShell({
           src={siteConfig.wallpaper.desktop}
           alt="Soft blush peonies and ivory roses against a muted mauve background"
           fill
-          priority
+          loading="eager"
+          fetchPriority="high"
           sizes="100vw"
           className={styles.wallpaper}
         />

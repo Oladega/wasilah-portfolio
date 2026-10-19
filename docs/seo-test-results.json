@@ -1,0 +1,89 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Wasilat Atilade | Marketing, Events & Communications Portfolio",
+      "readableCharacters": 231,
+      "noJavaScript": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "title": "About Wasilat Atilade | Experience, Education & Awards",
+      "readableCharacters": 3734,
+      "noJavaScript": true
+    },
+    {
+      "path": "/work",
+      "status": 200,
+      "title": "Projects & Work | Wasilat Atilade",
+      "readableCharacters": 2503,
+      "noJavaScript": true
+    },
+    {
+      "path": "/resume",
+      "status": 200,
+      "title": "Résumé | Wasilat Atilade",
+      "readableCharacters": 2971,
+      "noJavaScript": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "title": "Contact Wasilat Atilade",
+      "readableCharacters": 360,
+      "noJavaScript": true
+    },
+    {
+      "path": "/work/halden",
+      "status": 200,
+      "title": "Sunbo Collective | Wasilat Atilade",
+      "readableCharacters": 1169,
+      "noJavaScript": true
+    },
+    {
+      "path": "/work/pulse",
+      "status": 200,
+      "title": "Final Year Week ’26 | Wasilat Atilade",
+      "readableCharacters": 2403,
+      "noJavaScript": true
+    },
+    {
+      "path": "/work/orbit",
+      "status": 200,
+      "title": "NSASA Presidency | Wasilat Atilade",
+      "readableCharacters": 2475,
+      "noJavaScript": true
+    },
+    {
+      "path": "/work/nacre",
+      "status": 200,
+      "title": "Sign-Out After Party | Wasilat Atilade",
+      "readableCharacters": 2201,
+      "noJavaScript": true
+    },
+    {
+      "path": "/work/kiln-co",
+      "status": 200,
+      "title": "Explore 7.0 — Annual Sociology Conference | Wasilat Atilade",
+      "readableCharacters": 2203,
+      "noJavaScript": true
+    }
+  ],
+  "sitemapUrls": [
+    "https://wasilah-portfolio.vercel.app/",
+    "https://wasilah-portfolio.vercel.app/about",
+    "https://wasilah-portfolio.vercel.app/work",
+    "https://wasilah-portfolio.vercel.app/resume",
+    "https://wasilah-portfolio.vercel.app/contact",
+    "https://wasilah-portfolio.vercel.app/work/halden",
+    "https://wasilah-portfolio.vercel.app/work/pulse",
+    "https://wasilah-portfolio.vercel.app/work/orbit",
+    "https://wasilah-portfolio.vercel.app/work/nacre",
+    "https://wasilah-portfolio.vercel.app/work/kiln-co"
+  ],
+  "previewNoindex": "pass",
+  "missingRoutes": "404",
+  "noJavaScriptNavigation": "pass"
+}
