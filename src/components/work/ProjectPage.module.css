@@ -1,4 +1,5 @@
 .window {
+  pointer-events: auto;
   z-index: 9;
   position: absolute;
   left: max(3vw, calc((100% - 1240px) / 2));
@@ -395,3 +396,11 @@
 @media (max-width: 809.98px) { .gallery { columns: 1; } }
 
 .metrics .longMetric { font-size: 19px; letter-spacing: -0.04em; }
+
+.window.maximized {
+  left: max(12px, env(safe-area-inset-left, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  top: calc(42px + env(safe-area-inset-top, 0px));
+  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  height: auto; transform: none;
+}

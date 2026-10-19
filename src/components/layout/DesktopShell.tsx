@@ -11,7 +11,7 @@ export function DesktopShell({
 }) {
   return (
     <main className={styles.desktop}>
-      <picture>
+      <picture data-desktop-background>
         <source
           sizes="100vw"
           srcSet={`${siteConfig.wallpaper.mobile} 640w, ${siteConfig.wallpaper.tablet} 1024w, ${siteConfig.wallpaper.desktop} 1672w`}
@@ -25,7 +25,7 @@ export function DesktopShell({
           className={styles.wallpaper}
         />
       </picture>
-      <header className={styles.menu}>
+      <header className={styles.menu} data-desktop-background>
         <Link href="/">
           {siteConfig.name}
         </Link>

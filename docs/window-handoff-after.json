@@ -1,0 +1,26 @@
+[
+  {
+    "kind": "open",
+    "realConnected": true,
+    "opacity": "1",
+    "transition": null
+  },
+  {
+    "kind": "minimize",
+    "realConnected": true,
+    "opacity": "0",
+    "transition": null
+  },
+  {
+    "kind": "restore",
+    "realConnected": true,
+    "opacity": "1",
+    "transition": null
+  },
+  {
+    "kind": "close",
+    "realConnected": true,
+    "opacity": "0",
+    "transition": null
+  }
+]

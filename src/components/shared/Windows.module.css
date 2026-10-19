@@ -58,23 +58,9 @@
   display: block;
   padding: 0;
 }
-.red {
-  background: #ff5f57;
-  position: relative;
-}
-.red span {
-  color: #8b1c16;
-  font-size: 14px;
-  position: absolute;
-  inset: -2px 0 0;
-  opacity: 0;
-}
-.red:hover span {
-  opacity: 1;
-}
-.yellow {
-  background: #febc2e;
-}
+.red { background: #ff5f57; }
+.yellow { background: #febc2e; }
+.lights .yellow:disabled { opacity: 1; }
 .green {
   background: #28c840;
 }
@@ -335,8 +321,8 @@
     background: rgba(255, 255, 255, 0.12);
   }
   .filters button[aria-pressed="true"] {
-    background: #0a84ff;
-    border-color: #0a84ff;
+    background: #006dd9;
+    border-color: #006dd9;
   }
   .workGrid {
     padding: 16px 16px 24px;
@@ -511,4 +497,34 @@
     height: calc(100dvh - 80px);
     max-height: calc(100dvh - 80px);
   }
+}
+
+/* Maximize is immediate in phase 1; the drag transform survives for restoration. */
+.frame.maximized {
+  position: absolute;
+  top: calc(6px + env(safe-area-inset-top, 0px));
+  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  left: max(12px, env(safe-area-inset-left, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  width: auto; height: auto; max-width: none; max-height: none;
+  transform: none !important;
+}
+@media (max-width: 809.98px) {
+  .frame.maximized { top: calc(42px + env(safe-area-inset-top, 0px)); }
+}
+.lights button:disabled { cursor: default; opacity: .45; }
+
+.lights button { position: relative; display: grid; place-items: center; flex-shrink: 0; }
+.lights svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0; pointer-events: none; }
+.lights .red { color: #8b1c16; }
+.lights .yellow { color: #805600; }
+.lights .green { color: #086522; }
+.lights:hover button:not(:disabled) svg,
+.lights:focus-within button:not(:disabled) svg { opacity: 1; }
+.lights button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media (hover: none) { .lights button:not(:disabled) svg { opacity: 1; } }
+
+/* Mobile uses close-only window management; geometry controls belong to desktop. */
+@media (max-width: 809.98px) {
+  .lights .yellow, .lights .green { display: none; }
 }

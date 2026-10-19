@@ -16,7 +16,18 @@
     "test:pdf-media": "node scripts/pdf-media-check.mjs",
     "test:about-content": "node scripts/about-content-check.mjs",
     "test:design-update": "node scripts/design-update-check.mjs",
-    "test:welcome": "node scripts/welcome-check.mjs"
+    "test:welcome": "node scripts/welcome-check.mjs",
+    "test:windows": "node scripts/window-state-check.mjs && node scripts/window-cleanup-check.mjs",
+    "test:window-controls": "node scripts/window-cleanup-check.mjs",
+    "test:window-animations": "node scripts/window-animation-check.mjs",
+    "prebuild": "node scripts/copy-pdf-worker.mjs",
+    "predev": "node scripts/copy-pdf-worker.mjs",
+    "test:resume-zoom": "node scripts/resume-zoom-check.mjs",
+    "test:final-review": "node scripts/final-window-review.mjs",
+    "profile:windows": "node scripts/profile-window-experience.mjs",
+    "profile:memory": "node scripts/profile-window-memory.mjs",
+    "test:window-flicker": "node scripts/window-flicker-check.mjs",
+    "test:window-handoff-pixels": "node scripts/window-handoff-pixels.mjs"
   },
   "keywords": [],
   "author": "",
@@ -25,10 +36,12 @@
   "dependencies": {
     "motion": "^14.3.0",
     "next": "^16.4.2",
+    "pdfjs-dist": "^6.4.299",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",

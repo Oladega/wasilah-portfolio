@@ -1,0 +1,44 @@
+[
+  {
+    "engine": "chrome",
+    "width": 1440,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "chrome",
+    "width": 1280,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "chrome",
+    "width": 1024,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "chrome",
+    "width": 768,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "chrome",
+    "width": 430,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  },
+  {
+    "engine": "chrome",
+    "width": 375,
+    "windows": 4,
+    "controls": "pass",
+    "outsideClose": "pass"
+  }
+]

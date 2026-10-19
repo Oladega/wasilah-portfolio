@@ -1,0 +1,5 @@
+import {chromium} from 'playwright';
+const b=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});const p=await b.newPage({reducedMotion:'reduce'});
+await p.addInitScript(()=>{let next=0;window.__reviewCommits=0;window.__REACT_DEVTOOLS_GLOBAL_HOOK__={supportsFiber:true,renderers:new Map(),inject(renderer){this.renderers.set(++next,renderer);return next},onCommitFiberRoot(){window.__reviewCommits++},onCommitFiberUnmount(){},checkDCE(){}};});
+await p.goto(process.env.BASE_URL||'http://localhost:3003');await p.getByRole('navigation',{name:'Portfolio',exact:true}).getByRole('button').first().click();await p.getByRole('dialog').waitFor();
+const counts=await p.evaluate(async()=>{const before=window.__reviewCommits,node=document.querySelector('[role="dialog"]');for(let i=0;i<20;i++){node.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true}));await new Promise(requestAnimationFrame);}return {before,after:window.__reviewCommits,delta:window.__reviewCommits-before};});console.log(JSON.stringify(counts));await b.close();

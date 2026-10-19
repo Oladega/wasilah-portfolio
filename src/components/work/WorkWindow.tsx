@@ -9,8 +9,6 @@ export function WorkWindow({ onClose }: { onClose: () => void }) {
   const [filter, setFilter] = useState("all");
   return (
     <WindowFrame
-      title="Work"
-      size="expanded"
       onClose={onClose}
       sidebar={
         <>

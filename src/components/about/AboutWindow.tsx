@@ -19,7 +19,7 @@ export function AboutWindow({ onClose }: { onClose: () => void }) {
     content.current.scrollTo({ top: content.current.scrollTop + node.getBoundingClientRect().top - content.current.getBoundingClientRect().top - 28, behavior: reduced ? "instant" : "smooth" });
   };
   return (
-    <WindowFrame title="About Wasilah" onClose={onClose} size="expanded" sidebar={
+    <WindowFrame onClose={onClose} sidebar={
       <nav className={styles.navigation} aria-label="About sections">
         <button onClick={() => content.current?.scrollTo({ top: 0, behavior: reduced ? "instant" : "smooth" })}><Icon name="user" />About me</button>
         <button onClick={() => scrollTo(capabilities.current)}><Icon name="badge" />What I do</button>
@@ -28,8 +28,8 @@ export function AboutWindow({ onClose }: { onClose: () => void }) {
         <button onClick={() => scrollTo(tools.current)}><Icon name="tools" />Tools I use</button>
       </nav>
     }>
-      <div ref={content} className={styles.content}>
-        <div className={styles.photos} aria-label="Photo of Wasilah">
+      <div ref={content} className={styles.content} tabIndex={0} role="region" aria-label="About Wasilah content">
+        <div className={styles.photos}>
           <div className={styles.photo}><Image src={about.candid} alt="Wasilah at a costume event" fill sizes="(max-width:809px) 80vw, 350px" priority /></div>
         </div>
         <div className={styles.copy}>

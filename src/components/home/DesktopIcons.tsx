@@ -1,3 +1,4 @@
+import { useWindowManager } from "@/components/windows/WindowManager";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { navigation, type WindowId } from "@/data/site";
@@ -7,17 +8,20 @@ export function DesktopIcons({
   onOpen,
 }: {
   active: WindowId | null;
-  onOpen: (id: WindowId) => void;
+  onOpen: (id: WindowId, launcher?: HTMLElement) => void;
 }) {
+  const { registerIcon } = useWindowManager();
   return (
     <nav aria-label="Portfolio" className={styles.icons}>
       {navigation.map((item) => (
         <motion.button
+          ref={element => registerIcon(item.id, element)}
+          data-window-launcher={item.id}
           drag
           dragMomentum={false}
           key={item.id}
           className={`${styles.icon} ${styles[item.id]} ${active === item.id ? styles.selected : ""}`}
-          onClick={() => onOpen(item.id)}
+          onClick={event => onOpen(item.id, event.currentTarget)}
         >
           <picture>
             <source

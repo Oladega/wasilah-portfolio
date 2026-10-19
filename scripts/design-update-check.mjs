@@ -20,7 +20,7 @@ for (const width of [1440,1024,768,430,375]) {
  assert.equal(await about.locator('img').count(),1);
  await about.locator('img').evaluateAll(images=>Promise.all(images.map(image=>{image.loading='eager';return image.decode();})));
  const box=await about.boundingBox();assert.ok(box.width>=width*.85);assert.ok(box.height>=750);
- const photos=about.getByLabel('Photo of Wasilah');
+ const photos=about.locator('img').first().locator('../..');
  const proportions=await photos.evaluate(el=>({row:el.clientWidth/el.parentElement.clientWidth,imgs:[...el.querySelectorAll('img')].map(img=>({ratio:img.parentElement.clientWidth/el.parentElement.parentElement.clientWidth,fit:getComputedStyle(img).objectFit}))}));
  assert.ok(proportions.row<=(width<810?1.01:.81));
  assert.ok(proportions.imgs.every(img=>img.ratio<=(width<810?1.01:.36) && img.fit==='contain'));

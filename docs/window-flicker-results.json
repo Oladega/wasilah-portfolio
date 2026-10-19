@@ -1,0 +1,65 @@
+[
+  {
+    "engine": "chrome",
+    "width": 1440,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "chrome",
+    "width": 768,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "chrome",
+    "width": 375,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "firefox",
+    "width": 1440,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "firefox",
+    "width": 768,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "firefox",
+    "width": 375,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 1440,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 768,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  },
+  {
+    "engine": "webkit",
+    "width": 375,
+    "windows": 4,
+    "ownershipLeaks": 0,
+    "exitLeaks": 0
+  }
+]

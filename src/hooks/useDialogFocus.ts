@@ -1,50 +1,42 @@
 "use client";
-import { useEffect, type RefObject } from "react";
-// Keep keyboard focus inside the open dialog and restore it on dismissal.
-const dialogs: HTMLElement[] = [];
-export function useDialogFocus(
-  ref: RefObject<HTMLElement | null>,
-  onClose: () => void,
-) {
+import { useEffect, useLayoutEffect, useRef, type RefObject } from "react";
+const focusable = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex="0"]';
+// Desktop applications share focus; only the active mobile dialog traps it.
+export function useDialogFocus(ref: RefObject<HTMLElement | null>, onClose: () => void, enabled = true, modal = true) {
+  const close = useRef(onClose);
+  useLayoutEffect(() => { close.current = onClose; }, [onClose]);
   useEffect(() => {
     const node = ref.current;
-    if (!node) return;
+    if (!node || !enabled) return;
     const previous = document.activeElement as HTMLElement | null;
-    dialogs.push(node);
-    node.focus();
-    function onKey(e: KeyboardEvent) {
-      if (dialogs.at(-1) !== node) return;
-      if (e.key === "Escape") {
-        e.preventDefault();
-        onClose();
-        return;
-      }
-      if (e.key !== "Tab") return;
-      const items = Array.from(
-        node!.querySelectorAll<HTMLElement>(
-          'a[href],button:not([disabled]),[tabindex="0"]',
-        ),
-      ).filter((item) => item.getClientRects().length > 0);
-      if (!items.length) return;
-      const first = items[0],
-        last = items[items.length - 1];
-      if (
-        e.shiftKey &&
-        (document.activeElement === first || document.activeElement === node)
-      ) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+    const backgrounds = modal ? [...document.querySelectorAll<HTMLElement>('[data-desktop-background]')] : [];
+    const previousInert = backgrounds.map(element => element.inert);
+    backgrounds.forEach(element => { element.inert = true; });
+    function onFocus(event: FocusEvent) {
+      if (modal && event.target instanceof Node && !node!.contains(event.target)) node!.focus({ preventScroll: true });
     }
-    document.addEventListener("keydown", onKey);
+    function onKey(event: KeyboardEvent) {
+      if (event.defaultPrevented) return;
+      if (event.key === 'Escape') { event.preventDefault(); close.current(); return; }
+      if (event.key !== 'Tab' || !modal) return;
+      const items = [...node!.querySelectorAll<HTMLElement>(focusable)].filter(item => item.getClientRects().length > 0);
+      if (!items.length) { event.preventDefault(); node!.focus(); return; }
+      if (event.shiftKey && (document.activeElement === items[0] || document.activeElement === node)) { event.preventDefault(); items.at(-1)!.focus(); }
+      else if (!event.shiftKey && document.activeElement === items.at(-1)) { event.preventDefault(); items[0].focus(); }
+    }
+    document.addEventListener('keydown', onKey);
+    if (modal) document.addEventListener('focusin', onFocus);
+    node.focus({ preventScroll: true });
     return () => {
-      document.removeEventListener("keydown", onKey);
-      const index = dialogs.indexOf(node);
-      if (index >= 0) dialogs.splice(index, 1);
-      (dialogs.at(-1) ?? previous)?.focus();
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('focusin', onFocus);
+      backgrounds.forEach((element,index) => { element.inert = previousInert[index]; });
+      // A normal focus switch must not steal focus back from another open app.
+      if (node.isConnected && node.dataset.windowState !== 'closed') return;
+      const foreground = document.querySelector<HTMLElement>('[data-window-active="true"]');
+      const launcher = document.querySelector<HTMLElement>(`[data-window-launcher="${node.dataset.windowId}"]`);
+      const target = foreground ?? (previous?.isConnected && previous !== document.body && !node.contains(previous) ? previous : launcher);
+      target?.focus({ preventScroll: true });
     };
-  }, [ref, onClose]);
+  }, [ref,enabled,modal]);
 }

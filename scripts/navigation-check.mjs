@@ -14,8 +14,8 @@ for (const width of [1440, 1024, 430, 375]) {
     await page.locator('[class*="welcome"]').waitFor({ state: 'visible' });
     await page.locator('[class*="welcome"]').waitFor({ state: 'detached' });
   }
-  const nav = page.getByRole('navigation', { name: 'Portfolio', exact: true });
-  const labels = await nav.getByRole('button').allTextContents();
+  const nav = page.locator('nav[aria-label="Portfolio"]');
+  const labels = await nav.locator('button').allTextContents();
   assert.equal(await page.getByRole('navigation', { name: 'Social links', includeHidden: true }).count(), 0);
   await nav.getByRole('button', { name: 'My Work', exact: true }).click();
   const work = page.getByRole('dialog', { name: 'Work', exact: true });
@@ -28,7 +28,7 @@ for (const width of [1440, 1024, 430, 375]) {
   const project = page.getByRole('dialog', { name: 'Final Year Week ’26 project', exact: true });
   await project.waitFor();
   assert.equal(await page.getByRole('dialog').count(), 1);
-  assert.deepEqual(await nav.getByRole('button').allTextContents(), labels);
+  assert.deepEqual(await nav.locator('button').allTextContents(), labels);
   assert.equal(await page.getByRole('heading', { name: /Hi, I'm Wasilah/ }).count(), 1);
   assert.equal(await page.getByText('Case Studies', { exact: true }).count(), 0);
   assert.equal(await page.getByText('Photos', { exact: true }).count(), 0);
@@ -47,6 +47,7 @@ for (const width of [1440, 1024, 430, 375]) {
   assert.equal(await page.locator('[class*="welcome"]').count(), 0);
   await page.screenshot({ path: `docs/screenshots/navigation-update/work-${width}.png` });
   await page.keyboard.press('Escape');
+  await page.getByRole('dialog').waitFor({state:'hidden'});
   assert.equal(await page.getByRole('dialog').count(), 0);
   assert.equal(new URL(page.url()).hash, '');
   await page.reload();
@@ -55,4 +56,4 @@ for (const width of [1440, 1024, 430, 375]) {
 }
 assert.deepEqual(errors, []);
 await browser.close();
-console.log('Passed: shared desktop, no bottom dock, larger matching project window, Back returns to Work, one modal, welcome once per session; four viewport sizes.');
+console.log('Passed: shared desktop, no bottom dock, larger matching project window, Back returns to Work, consistent window navigation, welcome once per session; four viewport sizes.');

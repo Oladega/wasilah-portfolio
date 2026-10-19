@@ -16,7 +16,7 @@ export function LocationStatus() {
     </aside>
   );
 }
-export function Hero({ onOpenWork }: { onOpenWork: () => void }) {
+export function Hero({ onOpenWork }: { onOpenWork: (launcher: HTMLElement) => void }) {
   return (
     <section className={styles.greeting} aria-label="Introduction">
       <div className={styles.specialties}>
@@ -33,7 +33,7 @@ export function Hero({ onOpenWork }: { onOpenWork: () => void }) {
         <br />
         {siteConfig.hero.description}
       </h1>
-      <button className={styles.cta} onClick={onOpenWork}>
+      <button className={styles.cta} onClick={event => onOpenWork(event.currentTarget)}>
         See my work <span>↵</span>
       </button>
     </section>

@@ -18,7 +18,7 @@ for (const width of [1440, 430]) {
     // Desktop actions now sit beneath the window; click the exposed backdrop.
     await page.mouse.click(4, 60);
     assert.equal(await page.getByRole('dialog').count(), 0);
-    assert.equal(await backdrop.count(), 0);
+    assert.equal(await backdrop.filter({visible:true}).count(), 0);
     await actions.nth((index + 1) % 4).click();
     assert.equal(await page.getByRole('dialog').count(), 1);
     await page.keyboard.press('Escape');
@@ -32,4 +32,4 @@ for (const width of [1440, 430]) {
   await page.keyboard.press('Escape');
 }
 await browser.close();
-console.log('Passed: all overlay actions, outside clicks consumed, no stacking, 10% backdrop, inside clicks, Escape and focus restoration on desktop and mobile.');
+console.log('Passed: all overlay actions, outside clicks consumed, active-window close isolation, 10% backdrop, inside clicks, Escape and focus restoration on desktop and mobile.');

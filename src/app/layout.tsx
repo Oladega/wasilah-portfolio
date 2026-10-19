@@ -1,3 +1,4 @@
+import { WindowManagerProvider } from "@/components/windows/WindowManager";
 import type { Metadata } from "next";
 import { portfolioMetadata } from "@/lib/metadata";
 import "./globals.css";
@@ -13,7 +14,7 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/dm-serif-display-regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
         <script id="portfolio-welcome-state" dangerouslySetInnerHTML={{ __html: `(function(){var show=location.pathname==='/'&&location.hash!=='#work'&&!matchMedia('(prefers-reduced-motion: reduce)').matches;try{show=show&&!sessionStorage.getItem('portfolio-welcome-seen');}catch(e){}document.documentElement.dataset.portfolioWelcome=show?'show':'seen';})();` }} />
       </head>
-      <body>{children}</body>
+      <body><WindowManagerProvider>{children}</WindowManagerProvider></body>
     </html>
   );
 }

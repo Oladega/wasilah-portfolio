@@ -1,0 +1,131 @@
+{
+  "browser": "firefox",
+  "status": "passed",
+  "widths": [
+    1440,
+    1280,
+    1024,
+    768,
+    430,
+    375
+  ],
+  "cases": 24,
+  "violations": [
+    {
+      "window": "About Me",
+      "width": 1440,
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "target": [
+            ".YeEf2G_about > .YeEf2G_desktopLabel"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffffff, background color: #6084c8, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "window": "My Work",
+      "width": 1440,
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "target": [
+            ".YeEf2G_work > .YeEf2G_desktopLabel"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffffff, background color: #6084c8, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "window": "Résumé",
+      "width": 1440,
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "target": [
+            ".YeEf2G_resume > .YeEf2G_desktopLabel"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffffff, background color: #6084c8, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    },
+    {
+      "window": "Contact Me",
+      "width": 1440,
+      "id": "color-contrast",
+      "impact": "serious",
+      "nodes": [
+        {
+          "target": [
+            ".YeEf2G_contact > .YeEf2G_desktopLabel"
+          ],
+          "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.72 (foreground color: #ffffff, background color: #6084c8, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        }
+      ]
+    }
+  ],
+  "incomplete": [
+    {
+      "window": "About Me",
+      "width": 1440,
+      "id": "color-contrast",
+      "nodes": 26
+    },
+    {
+      "window": "My Work",
+      "width": 1440,
+      "id": "color-contrast",
+      "nodes": 31
+    },
+    {
+      "window": "Résumé",
+      "width": 1440,
+      "id": "color-contrast",
+      "nodes": 114
+    },
+    {
+      "window": "Contact Me",
+      "width": 1440,
+      "id": "color-contrast",
+      "nodes": 33
+    },
+    {
+      "window": "About Me",
+      "width": 375,
+      "id": "color-contrast",
+      "nodes": 5
+    },
+    {
+      "window": "My Work",
+      "width": 375,
+      "id": "color-contrast",
+      "nodes": 9
+    },
+    {
+      "window": "Résumé",
+      "width": 375,
+      "id": "color-contrast",
+      "nodes": 99
+    },
+    {
+      "window": "Contact Me",
+      "width": 375,
+      "id": "color-contrast",
+      "nodes": 18
+    }
+  ],
+  "runtime": [],
+  "features": {
+    "animate": true,
+    "resizeObserver": true,
+    "intersectionObserver": true,
+    "inert": true,
+    "backdrop": true,
+    "dvh": true
+  },
+  "version": "157.0"
+}

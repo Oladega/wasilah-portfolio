@@ -1,0 +1,5 @@
+{
+  "meanAbsoluteChannelDifference": 0.051183131720430104,
+  "pixelsChangingMoreThan16Percent": 0,
+  "note": "Warm About image, same window crop at 99.999% versus final; small differences include glyph rasterization."
+}

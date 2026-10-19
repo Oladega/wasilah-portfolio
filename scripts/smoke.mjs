@@ -30,6 +30,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
     .click();
   await p.getByRole("dialog", { name: "About Wasilah" }).waitFor();
   await p.keyboard.press("Escape");
+  await p.getByRole("dialog").waitFor({ state: "hidden" });
   assert.equal(await p.getByRole("dialog").count(), 0);
   await p.getByRole("button", { name: "My Work", exact: true }).click();
   const work = p.getByRole("dialog", { name: "Work", exact: true });
@@ -71,6 +72,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
   await contact.waitFor();
   assert.equal(await contact.getByRole("navigation", { name: "Contact options" }).getByRole("link").count(), 3);
   await p.keyboard.press("Escape");
+  await p.getByRole("dialog").waitFor({ state: "hidden" });
   await p.getByRole("navigation", { name: "Portfolio", exact: true }).getByRole("button", { name: width < 810 ? "Résumé" : "Résumé.pdf", exact: true }).click();
   await p.getByRole("dialog", { name: "Résumé.pdf", exact: true }).waitFor();
   const download = p.waitForEvent("download");

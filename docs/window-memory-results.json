@@ -1,0 +1,47 @@
+{
+  "note": "Forced-GC snapshots after full resume sessions; warming caches can retain heap. Not proof of absence of all leaks.",
+  "samples": [
+    {
+      "cycle": 0,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6224032
+    },
+    {
+      "cycle": 1,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6460040
+    },
+    {
+      "cycle": 2,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6617628
+    },
+    {
+      "cycle": 3,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6656624
+    },
+    {
+      "cycle": 4,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6784044
+    },
+    {
+      "cycle": 5,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6806164
+    },
+    {
+      "cycle": 6,
+      "nodes": 154,
+      "listeners": 345,
+      "heapBytes": 6839240
+    }
+  ]
+}

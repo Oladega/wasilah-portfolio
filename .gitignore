@@ -9,3 +9,6 @@ docs/screenshots/
 .env
 .env.*
 !.env.example
+
+# Generated from the installed PDF.js version before dev/build.
+public/pdfjs/

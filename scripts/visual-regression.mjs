@@ -93,7 +93,7 @@ for (const width of [1440, 1280, 1024, 768, 430, 375]) {
       .click();
     await capture(`about-${width}`);
     await page
-      .getByRole("button", { name: "Close window", exact: true })
+      .getByRole("button", { name: /^Close / })
       .first()
       .click();
     await page.getByRole("button", { name: "My Work", exact: true }).click();

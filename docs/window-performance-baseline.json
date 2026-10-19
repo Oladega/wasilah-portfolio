@@ -1,0 +1,83 @@
+{
+  "hardware": {
+    "cpu": "Apple M3 Pro",
+    "cores": 11,
+    "arch": "arm64",
+    "platform": "darwin",
+    "memoryGiB": 18
+  },
+  "browser": "155.0.8059.82",
+  "mode": "headless, production static export",
+  "profiles": [
+    {
+      "name": "desktop-native",
+      "width": 1440,
+      "height": 900,
+      "rate": 1,
+      "animations": 44,
+      "frameSamples": 884,
+      "medianRafMs": 16.7,
+      "p95RafMs": 16.7,
+      "rafFpsProxy": 60,
+      "gapsOver25ms": 0,
+      "longTasksDuringAnimations": [],
+      "maxRendererTaskMs": 27.2,
+      "layouts": 216,
+      "styleRecalculations": 1415,
+      "layoutMs": 37.04,
+      "scriptMs": 512.9,
+      "heapDeltaBytes": 947504,
+      "nodeDelta": 522,
+      "listenerDelta": 0,
+      "trace": "docs/screenshots/final-review/desktop-native.trace.json"
+    },
+    {
+      "name": "mobile-native",
+      "width": 430,
+      "height": 932,
+      "rate": 1,
+      "animations": 44,
+      "frameSamples": 882,
+      "medianRafMs": 16.7,
+      "p95RafMs": 16.8,
+      "rafFpsProxy": 59.9,
+      "gapsOver25ms": 2,
+      "longTasksDuringAnimations": [],
+      "maxRendererTaskMs": 29.3,
+      "layouts": 233,
+      "styleRecalculations": 1421,
+      "layoutMs": 40.78,
+      "scriptMs": 742.11,
+      "heapDeltaBytes": 1042636,
+      "nodeDelta": 522,
+      "listenerDelta": 0,
+      "trace": "docs/screenshots/final-review/mobile-native.trace.json"
+    },
+    {
+      "name": "mobile-cpu4x",
+      "width": 430,
+      "height": 932,
+      "rate": 4,
+      "animations": 44,
+      "frameSamples": 858,
+      "medianRafMs": 16.7,
+      "p95RafMs": 16.8,
+      "rafFpsProxy": 58.4,
+      "gapsOver25ms": 18,
+      "longTasksDuringAnimations": [],
+      "maxRendererTaskMs": 50,
+      "layouts": 233,
+      "styleRecalculations": 1399,
+      "layoutMs": 86.47,
+      "scriptMs": 2140.13,
+      "heapDeltaBytes": 1036272,
+      "nodeDelta": 522,
+      "listenerDelta": 0,
+      "trace": "docs/screenshots/final-review/mobile-cpu4x.trace.json"
+    }
+  ],
+  "caveats": [
+    "Baseline memory/node deltas were contaminated by retained Playwright ElementHandles; do not use them to infer application leaks. Final profiling uses locator waits and a separate repeated-session memory probe.",
+    "requestAnimationFrame cadence is a proxy, not measured displayed/composited frame rate."
+  ]
+}

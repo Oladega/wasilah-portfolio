@@ -15,7 +15,7 @@ for (const width of [1440, 430, 375]) {
  await page.setViewportSize({ width, height: 932 });
  for (const [slug, count] of Object.entries({halden:8,pulse:6,orbit:5,nacre:1,'kiln-co':6})) {
   assert.equal((await page.goto(`${base}/work/${slug}`)).status(),200);
-  const gallery = page.locator('#gallery');
+  const gallery = page.locator('#gallery'); await gallery.locator('figure').first().waitFor({state:'attached'});
   assert.equal(await gallery.locator('figure').count(),count,`${slug} image count`);
   await gallery.locator('img').evaluateAll(images => Promise.all(images.map(image => { image.loading='eager'; return image.decode(); })));
   assert.equal(await gallery.locator('img').evaluateAll(images => images.filter(image => image.naturalWidth===0 || !image.alt).length),0);

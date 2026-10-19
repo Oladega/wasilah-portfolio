@@ -7,16 +7,22 @@ import { useReducedMotion } from "motion/react";
 import type { Project } from "@/types/project";
 import { projects } from "@/data/projects";
 
+import { useWindowInstance } from "@/components/windows/WindowManager";
+import { useWindowTransition } from "@/components/windows/useWindowTransition";
+import { isPresented } from "@/components/windows/state";
 import { useDialogFocus } from "@/hooks/useDialogFocus";
-import { CloseButton, TrafficLights } from "@/components/shared/WindowFrame";
+import { CloseButton } from "@/components/shared/WindowFrame";
+import { WindowControls } from "@/components/shared/WindowControls";
 import { Icon } from "@/components/shared/Icon";
 import { ProjectCard } from "./ProjectCard";
 import styles from "./ProjectPage.module.css";
-export function ProjectPage({ project }: { project: Project }) {
+export function ProjectPage({ project, onClose }: { project: Project; onClose?: () => void }) {
   const router = useRouter();
+  const instance = useWindowInstance();
   const dialog = useRef<HTMLElement>(null);
-  const close = useCallback(() => router.push("/"), [router]);
-  useDialogFocus(dialog, close);
+  const close = useCallback(() => onClose ? onClose() : router.push("/"), [router, onClose]);
+  useWindowTransition(dialog);
+  useDialogFocus(dialog, close, !instance || (isPresented(instance.state) && instance.manager.activeId === instance.id), !instance?.manager.desktop);
   const reduced = useReducedMotion();
   const content = useRef<HTMLDivElement>(null);
   const index = projects.findIndex((p) => p.slug === project.slug);
@@ -38,15 +44,16 @@ export function ProjectPage({ project }: { project: Project }) {
         ref={dialog}
         tabIndex={-1}
         role="dialog"
-        aria-modal="true"
-        className={styles.window}
+        data-window-id={instance?.id}
+        data-window-state={instance?.state.visibilityState}
+        data-window-active={instance?.manager.activeId === instance?.id}
+        aria-modal={!instance?.manager.desktop}
+        className={`${styles.window} ${instance?.state.sizeMode === "maximized" ? styles.maximized : ""}`}
         aria-label={`${project.title} project`}
       >
         <header className={styles.titlebar}>
-          <div className={styles.trafficLights}><TrafficLights
-            onClose={() => {
-              router.push("/");
-            }}
+          <div className={styles.trafficLights}><WindowControls title={project.title}
+            onClose={close}
           /></div>
           <Link href="/#work" className={styles.back} aria-label="Back to all work">
             ‹<span className={styles.backLabel}>&nbsp; Works</span>

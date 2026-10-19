@@ -60,7 +60,6 @@ export const siteConfig = {
     ],
     tools: [
       "Chat GPT",
-      "Cloud AI",
       "Canva",
       "Figma",
       "Capcut",
@@ -105,10 +104,4 @@ export const navigation: {
     mobileImage: image("CF5as0hEHAFNJmlYq0Zf65kCQ-512"),
     image: image("DrhCTvdXIAltzmPzqWytmNcMQQ"),
   },
-];
-export const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/wasilat-atilade-2b54a823a/", image: "/images/dock/linkedin.jpg" },
-  { label: "Email", href: "mailto:wasilahatilade01@gmail.com", image: "/images/dock/mail.png" },
-  { label: "LinkedIn profile", href: "https://www.linkedin.com/in/wasilat-atilade-2b54a823a/", image: "/images/dock/linkedin.jpg" },
-  { label: "Phone", href: "tel:+2348142438558", image: "/images/dock/phone.png" },
 ];

@@ -8,7 +8,7 @@ const contacts = [
   { title: "Follow me on Twitter", detail: "@TheWasilah", href: "https://x.com/TheWasilah", icon: "twitter", short: "𝕏" },
 ];
 export function ContactWindow({ onClose }: { onClose: () => void }) {
-  return <WindowFrame title="Contact Me" onClose={onClose} className={styles.window}>
+  return <WindowFrame onClose={onClose} className={styles.window}>
     <div className={styles.content}>
       <p className={styles.eyebrow}>LET’S CONNECT</p>
       <h2>Have something<br /><em>in mind?</em></h2>
