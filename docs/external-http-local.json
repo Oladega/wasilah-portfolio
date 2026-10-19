@@ -1,0 +1,1124 @@
+{
+  "checkedAt": "2026-10-19T23:42:37.166Z",
+  "base": "http://127.0.0.1:3097",
+  "scope": "local static production export",
+  "requests": [
+    {
+      "path": "/",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 23307,
+      "result": "pass",
+      "metadata": {
+        "title": "Wasilat Atilade | Marketing, Events & Communications Portfolio",
+        "description": "Explore the portfolio of Wasilat Atilade, a marketing and communications professional with experience in social media management, event planning, campaign coordination and community engagement.",
+        "canonical": "https://wasilah-portfolio.vercel.app/",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 257
+    },
+    {
+      "path": "/about",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/about",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 37991,
+      "result": "pass",
+      "awards": [
+        "Penultimate of the Year",
+        "Exco of the Year",
+        "Most Social Female Student",
+        "Most Influential in Politics",
+        "Finalist of the Year",
+        "Most Influential in Politics",
+        "Most Supportive NSASAite",
+        "Most Popular Female Student",
+        "Special Recognition Award"
+      ],
+      "metadata": {
+        "title": "About Wasilat Atilade | Experience, Education & Awards",
+        "description": "Meet Wasilat Atilade, a University of Lagos Sociology graduate. Explore her marketing experience, community leadership, skills and 2025–2026 awards.",
+        "canonical": "https://wasilah-portfolio.vercel.app/about",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 3607
+    },
+    {
+      "path": "/work",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 33445,
+      "result": "pass",
+      "metadata": {
+        "title": "Projects & Work | Wasilat Atilade",
+        "description": "Explore Wasilat Atilade’s marketing campaigns, university events and community leadership: Sunbo Collective, Final Year Week, NSASA and Explore 7.0.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2443
+    },
+    {
+      "path": "/resume",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/resume",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 30840,
+      "result": "pass",
+      "metadata": {
+        "title": "Résumé | Wasilat Atilade",
+        "description": "Read Wasilat Atilade’s résumé: marketing employment, Sociology education, student leadership, project coordination and skills. Download the original PDF.",
+        "canonical": "https://wasilah-portfolio.vercel.app/resume",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2874
+    },
+    {
+      "path": "/contact",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/contact",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 20969,
+      "result": "pass",
+      "metadata": {
+        "title": "Contact Wasilat Atilade",
+        "description": "Contact Wasilat Atilade in Lagos, Nigeria for marketing, communications, events and project opportunities. Connect on LinkedIn or send an email.",
+        "canonical": "https://wasilah-portfolio.vercel.app/contact",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 342
+    },
+    {
+      "path": "/work/halden",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work/halden",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 41424,
+      "result": "pass",
+      "metadata": {
+        "title": "Sunbo Collective | Wasilat Atilade",
+        "description": "I support digital campaigns, social media content and audience engagement for Sunbo Collective. The selected campaign imagery brings together the brand’s apparel, visual identity and community-facing content.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/halden",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 1125
+    },
+    {
+      "path": "/work/pulse",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work/pulse",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 44206,
+      "result": "pass",
+      "metadata": {
+        "title": "Final Year Week ’26 | Wasilat Atilade",
+        "description": "I led a 22-member committee to deliver a five-day faculty-wide celebration for more than 1,000 final-year students across SOSSA and COMMSA. From the first planning meeting to the final setup, my work connected the people, logistics and decisions behind the experience.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/pulse",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2336
+    },
+    {
+      "path": "/work/orbit",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work/orbit",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 42897,
+      "result": "pass",
+      "metadata": {
+        "title": "NSASA Presidency | Wasilat Atilade",
+        "description": "As NSASA President, I represented a community of approximately 800 students and coordinated 10 executive leads within an 11-member team. My focus was keeping people aligned, responding to student needs and delivering the association’s major activities throughout the tenure.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/orbit",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2407
+    },
+    {
+      "path": "/work/nacre",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work/nacre",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 38669,
+      "result": "pass",
+      "metadata": {
+        "title": "Sign-Out After Party | Wasilat Atilade",
+        "description": "I worked alongside the Faculty Social Secretary to plan and promote a faculty sign-out after-party for graduating students. My contribution centred on pre-event coordination, raising awareness and getting students interested in attending.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/nacre",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2137
+    },
+    {
+      "path": "/work/kiln-co",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work/kiln-co",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 43302,
+      "result": "pass",
+      "metadata": {
+        "title": "Explore 7.0 — Annual Sociology Conference | Wasilat Atilade",
+        "description": "I led the annual Sociology conference from planning through execution, coordinating a 10-person team over a year. The theme, “People Power and the Future: Navigating Life in a Changing Society”, anchored a conference that welcomed more than 500 attendees.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/kiln-co",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2143
+    },
+    {
+      "path": "/sitemap.xml",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "application/xml; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 805,
+      "result": "pass",
+      "urls": [
+        "https://wasilah-portfolio.vercel.app/",
+        "https://wasilah-portfolio.vercel.app/about",
+        "https://wasilah-portfolio.vercel.app/work",
+        "https://wasilah-portfolio.vercel.app/resume",
+        "https://wasilah-portfolio.vercel.app/contact",
+        "https://wasilah-portfolio.vercel.app/work/halden",
+        "https://wasilah-portfolio.vercel.app/work/pulse",
+        "https://wasilah-portfolio.vercel.app/work/orbit",
+        "https://wasilah-portfolio.vercel.app/work/nacre",
+        "https://wasilah-portfolio.vercel.app/work/kiln-co"
+      ]
+    },
+    {
+      "path": "/robots.txt",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/robots.txt",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/plain",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 82,
+      "result": "pass"
+    },
+    {
+      "path": "/missing-page",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/missing-page",
+      "status": 404,
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "text/html",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "redirects": [],
+      "bytes": 14724,
+      "result": "pass"
+    },
+    {
+      "path": "/work/missing-project",
+      "agent": "browser",
+      "url": "http://127.0.0.1:3097/work/missing-project",
+      "status": 404,
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "text/html",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "redirects": [],
+      "bytes": 14724,
+      "result": "pass"
+    },
+    {
+      "path": "/",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 23307,
+      "result": "pass",
+      "metadata": {
+        "title": "Wasilat Atilade | Marketing, Events & Communications Portfolio",
+        "description": "Explore the portfolio of Wasilat Atilade, a marketing and communications professional with experience in social media management, event planning, campaign coordination and community engagement.",
+        "canonical": "https://wasilah-portfolio.vercel.app/",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 257
+    },
+    {
+      "path": "/about",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/about",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 37991,
+      "result": "pass",
+      "awards": [
+        "Penultimate of the Year",
+        "Exco of the Year",
+        "Most Social Female Student",
+        "Most Influential in Politics",
+        "Finalist of the Year",
+        "Most Influential in Politics",
+        "Most Supportive NSASAite",
+        "Most Popular Female Student",
+        "Special Recognition Award"
+      ],
+      "metadata": {
+        "title": "About Wasilat Atilade | Experience, Education & Awards",
+        "description": "Meet Wasilat Atilade, a University of Lagos Sociology graduate. Explore her marketing experience, community leadership, skills and 2025–2026 awards.",
+        "canonical": "https://wasilah-portfolio.vercel.app/about",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 3607
+    },
+    {
+      "path": "/work",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 33445,
+      "result": "pass",
+      "metadata": {
+        "title": "Projects & Work | Wasilat Atilade",
+        "description": "Explore Wasilat Atilade’s marketing campaigns, university events and community leadership: Sunbo Collective, Final Year Week, NSASA and Explore 7.0.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2443
+    },
+    {
+      "path": "/resume",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/resume",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 30840,
+      "result": "pass",
+      "metadata": {
+        "title": "Résumé | Wasilat Atilade",
+        "description": "Read Wasilat Atilade’s résumé: marketing employment, Sociology education, student leadership, project coordination and skills. Download the original PDF.",
+        "canonical": "https://wasilah-portfolio.vercel.app/resume",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2874
+    },
+    {
+      "path": "/contact",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/contact",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 20969,
+      "result": "pass",
+      "metadata": {
+        "title": "Contact Wasilat Atilade",
+        "description": "Contact Wasilat Atilade in Lagos, Nigeria for marketing, communications, events and project opportunities. Connect on LinkedIn or send an email.",
+        "canonical": "https://wasilah-portfolio.vercel.app/contact",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 342
+    },
+    {
+      "path": "/work/halden",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work/halden",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 41424,
+      "result": "pass",
+      "metadata": {
+        "title": "Sunbo Collective | Wasilat Atilade",
+        "description": "I support digital campaigns, social media content and audience engagement for Sunbo Collective. The selected campaign imagery brings together the brand’s apparel, visual identity and community-facing content.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/halden",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 1125
+    },
+    {
+      "path": "/work/pulse",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work/pulse",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 44206,
+      "result": "pass",
+      "metadata": {
+        "title": "Final Year Week ’26 | Wasilat Atilade",
+        "description": "I led a 22-member committee to deliver a five-day faculty-wide celebration for more than 1,000 final-year students across SOSSA and COMMSA. From the first planning meeting to the final setup, my work connected the people, logistics and decisions behind the experience.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/pulse",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2336
+    },
+    {
+      "path": "/work/orbit",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work/orbit",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 42897,
+      "result": "pass",
+      "metadata": {
+        "title": "NSASA Presidency | Wasilat Atilade",
+        "description": "As NSASA President, I represented a community of approximately 800 students and coordinated 10 executive leads within an 11-member team. My focus was keeping people aligned, responding to student needs and delivering the association’s major activities throughout the tenure.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/orbit",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2407
+    },
+    {
+      "path": "/work/nacre",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work/nacre",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 38669,
+      "result": "pass",
+      "metadata": {
+        "title": "Sign-Out After Party | Wasilat Atilade",
+        "description": "I worked alongside the Faculty Social Secretary to plan and promote a faculty sign-out after-party for graduating students. My contribution centred on pre-event coordination, raising awareness and getting students interested in attending.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/nacre",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2137
+    },
+    {
+      "path": "/work/kiln-co",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work/kiln-co",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 43302,
+      "result": "pass",
+      "metadata": {
+        "title": "Explore 7.0 — Annual Sociology Conference | Wasilat Atilade",
+        "description": "I led the annual Sociology conference from planning through execution, coordinating a 10-person team over a year. The theme, “People Power and the Future: Navigating Life in a Changing Society”, anchored a conference that welcomed more than 500 attendees.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/kiln-co",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2143
+    },
+    {
+      "path": "/sitemap.xml",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "application/xml; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 805,
+      "result": "pass",
+      "urls": [
+        "https://wasilah-portfolio.vercel.app/",
+        "https://wasilah-portfolio.vercel.app/about",
+        "https://wasilah-portfolio.vercel.app/work",
+        "https://wasilah-portfolio.vercel.app/resume",
+        "https://wasilah-portfolio.vercel.app/contact",
+        "https://wasilah-portfolio.vercel.app/work/halden",
+        "https://wasilah-portfolio.vercel.app/work/pulse",
+        "https://wasilah-portfolio.vercel.app/work/orbit",
+        "https://wasilah-portfolio.vercel.app/work/nacre",
+        "https://wasilah-portfolio.vercel.app/work/kiln-co"
+      ]
+    },
+    {
+      "path": "/robots.txt",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/robots.txt",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/plain",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 82,
+      "result": "pass"
+    },
+    {
+      "path": "/missing-page",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/missing-page",
+      "status": 404,
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "text/html",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "redirects": [],
+      "bytes": 14724,
+      "result": "pass"
+    },
+    {
+      "path": "/work/missing-project",
+      "agent": "googlebot",
+      "url": "http://127.0.0.1:3097/work/missing-project",
+      "status": 404,
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "text/html",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "redirects": [],
+      "bytes": 14724,
+      "result": "pass"
+    },
+    {
+      "path": "/",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 23307,
+      "result": "pass",
+      "metadata": {
+        "title": "Wasilat Atilade | Marketing, Events & Communications Portfolio",
+        "description": "Explore the portfolio of Wasilat Atilade, a marketing and communications professional with experience in social media management, event planning, campaign coordination and community engagement.",
+        "canonical": "https://wasilah-portfolio.vercel.app/",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 257
+    },
+    {
+      "path": "/about",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/about",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 37991,
+      "result": "pass",
+      "awards": [
+        "Penultimate of the Year",
+        "Exco of the Year",
+        "Most Social Female Student",
+        "Most Influential in Politics",
+        "Finalist of the Year",
+        "Most Influential in Politics",
+        "Most Supportive NSASAite",
+        "Most Popular Female Student",
+        "Special Recognition Award"
+      ],
+      "metadata": {
+        "title": "About Wasilat Atilade | Experience, Education & Awards",
+        "description": "Meet Wasilat Atilade, a University of Lagos Sociology graduate. Explore her marketing experience, community leadership, skills and 2025–2026 awards.",
+        "canonical": "https://wasilah-portfolio.vercel.app/about",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 3607
+    },
+    {
+      "path": "/work",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 33445,
+      "result": "pass",
+      "metadata": {
+        "title": "Projects & Work | Wasilat Atilade",
+        "description": "Explore Wasilat Atilade’s marketing campaigns, university events and community leadership: Sunbo Collective, Final Year Week, NSASA and Explore 7.0.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2443
+    },
+    {
+      "path": "/resume",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/resume",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 30840,
+      "result": "pass",
+      "metadata": {
+        "title": "Résumé | Wasilat Atilade",
+        "description": "Read Wasilat Atilade’s résumé: marketing employment, Sociology education, student leadership, project coordination and skills. Download the original PDF.",
+        "canonical": "https://wasilah-portfolio.vercel.app/resume",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2874
+    },
+    {
+      "path": "/contact",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/contact",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 20969,
+      "result": "pass",
+      "metadata": {
+        "title": "Contact Wasilat Atilade",
+        "description": "Contact Wasilat Atilade in Lagos, Nigeria for marketing, communications, events and project opportunities. Connect on LinkedIn or send an email.",
+        "canonical": "https://wasilah-portfolio.vercel.app/contact",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 342
+    },
+    {
+      "path": "/work/halden",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work/halden",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 41424,
+      "result": "pass",
+      "metadata": {
+        "title": "Sunbo Collective | Wasilat Atilade",
+        "description": "I support digital campaigns, social media content and audience engagement for Sunbo Collective. The selected campaign imagery brings together the brand’s apparel, visual identity and community-facing content.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/halden",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 1125
+    },
+    {
+      "path": "/work/pulse",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work/pulse",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 44206,
+      "result": "pass",
+      "metadata": {
+        "title": "Final Year Week ’26 | Wasilat Atilade",
+        "description": "I led a 22-member committee to deliver a five-day faculty-wide celebration for more than 1,000 final-year students across SOSSA and COMMSA. From the first planning meeting to the final setup, my work connected the people, logistics and decisions behind the experience.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/pulse",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2336
+    },
+    {
+      "path": "/work/orbit",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work/orbit",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 42897,
+      "result": "pass",
+      "metadata": {
+        "title": "NSASA Presidency | Wasilat Atilade",
+        "description": "As NSASA President, I represented a community of approximately 800 students and coordinated 10 executive leads within an 11-member team. My focus was keeping people aligned, responding to student needs and delivering the association’s major activities throughout the tenure.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/orbit",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2407
+    },
+    {
+      "path": "/work/nacre",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work/nacre",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 38669,
+      "result": "pass",
+      "metadata": {
+        "title": "Sign-Out After Party | Wasilat Atilade",
+        "description": "I worked alongside the Faculty Social Secretary to plan and promote a faculty sign-out after-party for graduating students. My contribution centred on pre-event coordination, raising awareness and getting students interested in attending.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/nacre",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2137
+    },
+    {
+      "path": "/work/kiln-co",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work/kiln-co",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 43302,
+      "result": "pass",
+      "metadata": {
+        "title": "Explore 7.0 — Annual Sociology Conference | Wasilat Atilade",
+        "description": "I led the annual Sociology conference from planning through execution, coordinating a 10-person team over a year. The theme, “People Power and the Future: Navigating Life in a Changing Society”, anchored a conference that welcomed more than 500 attendees.",
+        "canonical": "https://wasilah-portfolio.vercel.app/work/kiln-co",
+        "robots": "index, follow"
+      },
+      "serverRenderedCharacters": 2143
+    },
+    {
+      "path": "/sitemap.xml",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "application/xml; charset=utf-8",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 805,
+      "result": "pass",
+      "urls": [
+        "https://wasilah-portfolio.vercel.app/",
+        "https://wasilah-portfolio.vercel.app/about",
+        "https://wasilah-portfolio.vercel.app/work",
+        "https://wasilah-portfolio.vercel.app/resume",
+        "https://wasilah-portfolio.vercel.app/contact",
+        "https://wasilah-portfolio.vercel.app/work/halden",
+        "https://wasilah-portfolio.vercel.app/work/pulse",
+        "https://wasilah-portfolio.vercel.app/work/orbit",
+        "https://wasilah-portfolio.vercel.app/work/nacre",
+        "https://wasilah-portfolio.vercel.app/work/kiln-co"
+      ]
+    },
+    {
+      "path": "/robots.txt",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/robots.txt",
+      "status": 200,
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "text/plain",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
+      },
+      "redirects": [],
+      "bytes": 82,
+      "result": "pass"
+    },
+    {
+      "path": "/missing-page",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/missing-page",
+      "status": 404,
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "text/html",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "redirects": [],
+      "bytes": 14724,
+      "result": "pass"
+    },
+    {
+      "path": "/work/missing-project",
+      "agent": "bingbot",
+      "url": "http://127.0.0.1:3097/work/missing-project",
+      "status": 404,
+      "headers": {
+        "connection": "keep-alive",
+        "content-type": "text/html",
+        "date": "Mon, 19 Oct 2026 23:42:37 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked"
+      },
+      "redirects": [],
+      "bytes": 14724,
+      "result": "pass"
+    }
+  ],
+  "noJavaScript": [
+    {
+      "path": "/",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/work",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/resume",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/work/halden",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/work/pulse",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/work/orbit",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/work/nacre",
+      "status": 200,
+      "readable": true
+    },
+    {
+      "path": "/work/kiln-co",
+      "status": 200,
+      "readable": true
+    }
+  ],
+  "resumeDownload": {
+    "status": 200,
+    "contentType": "application/pdf"
+  },
+  "noJavaScriptNavigation": "pass",
+  "result": "pass"
+}

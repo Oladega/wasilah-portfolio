@@ -29,7 +29,9 @@
     "test:window-flicker": "node scripts/window-flicker-check.mjs",
     "test:window-handoff-pixels": "node scripts/window-handoff-pixels.mjs",
     "test:seo": "node scripts/seo-check.mjs",
-    "audit:lighthouse": "node scripts/lighthouse-seo.mjs"
+    "audit:lighthouse": "node scripts/lighthouse-seo.mjs",
+    "test:external": "npm run build && node scripts/external-http-check.mjs --local",
+    "test:external:production": "node scripts/external-http-check.mjs"
   },
   "keywords": [],
   "author": "",

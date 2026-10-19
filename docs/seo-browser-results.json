@@ -3,7 +3,7 @@
   "routes": [
     {
       "path": "/",
-      "cls": 0.00014851014994232987,
+      "cls": 0.00010226066897347174,
       "scriptTransferBytes": 215552,
       "scriptEncodedBytes": 213152,
       "sampledInteractionDurationsMs": [
@@ -20,11 +20,11 @@
         24,
         24,
         24,
+        32,
         24,
-        24,
-        24,
-        24,
-        24,
+        32,
+        32,
+        32,
         24,
         16
       ],
@@ -39,14 +39,14 @@
     },
     {
       "path": "/work",
-      "cls": 0,
+      "cls": 0.01872209169550173,
       "scriptTransferBytes": 143566,
       "scriptEncodedBytes": 141766,
       "runtimeErrors": []
     },
     {
       "path": "/resume",
-      "cls": 0.00030707785467128026,
+      "cls": 0,
       "scriptTransferBytes": 143566,
       "scriptEncodedBytes": 141766,
       "runtimeErrors": []
@@ -60,7 +60,7 @@
     },
     {
       "path": "/work/pulse",
-      "cls": 0.00041155397923875437,
+      "cls": 0.00010226066897347174,
       "scriptTransferBytes": 215552,
       "scriptEncodedBytes": 213152,
       "runtimeErrors": []

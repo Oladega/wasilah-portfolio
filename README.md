@@ -91,3 +91,9 @@ BASE_URL=http://localhost:3003 npm run audit:lighthouse
 ```
 
 See [SEO architecture, audit and Search Console/Bing instructions](docs/seo-architecture.md) and [measured test/performance results](docs/seo-results.md). Search engine verification, deployment, sitemap submission and indexing requests are owner follow-up steps; none are performed automatically.
+
+### Independent HTTP accessibility audit
+
+`npm run test:external` rebuilds the production export, starts an isolated preview, and checks all public routes using browser/Googlebot/Bingbot user agents plus JavaScript-disabled Chrome. It validates script-free page-specific content, real awards from shared data, metadata, redirect chains, headers, sitemap XML, robots directives, résumé PDF and unknown-route 404s. `npm run test:external:production` runs the same checks against the live URL without deploying; override `BASE_URL` for another target. Set `LOCAL_AUDIT_PORT` if port 3097 is occupied.
+
+See [live production investigation and route table](docs/external-accessibility.md). Raw evidence is saved separately in `docs/external-http-local.json` and `docs/external-http-production.json`; a passing local run alone does not establish live accessibility. Access through every third-party retrieval service and actual search indexing are separate claims.
