@@ -5,7 +5,10 @@ import { WindowFrame } from "@/components/shared/WindowFrame";
 import { Icon } from "@/components/shared/Icon";
 import { ProjectCard } from "./ProjectCard";
 import styles from "@/components/shared/Windows.module.css";
+import { useSessionProjectOrder } from "./useSessionProjectOrder";
 export function WorkWindow({ onClose }: { onClose: () => void }) {
+  const order = useSessionProjectOrder();
+  const orderedProjects = order.map(slug => projects.find(project => project.slug === slug)!);
   const [filter, setFilter] = useState("all");
   return (
     <WindowFrame
@@ -39,8 +42,8 @@ export function WorkWindow({ onClose }: { onClose: () => void }) {
         ))}
       </nav>
       <div className={styles.workContent}>
-      <div className={styles.workGrid}>
-        {projects
+      <div className={styles.workGrid} data-project-list>
+        {orderedProjects
           .filter((p) => filter === "all" || p.filter === filter || (filter === "events" && p.slug === "nacre"))
           .map((project) => (
             <ProjectCard key={project.slug} project={project} />

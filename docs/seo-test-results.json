@@ -39,35 +39,35 @@
       "path": "/work/halden",
       "status": 200,
       "title": "Sunbo Collective | Wasilat Atilade",
-      "readableCharacters": 1169,
+      "readableCharacters": 1215,
       "noJavaScript": true
     },
     {
       "path": "/work/pulse",
       "status": 200,
       "title": "Final Year Week ’26 | Wasilat Atilade",
-      "readableCharacters": 2403,
+      "readableCharacters": 2427,
       "noJavaScript": true
     },
     {
       "path": "/work/orbit",
       "status": 200,
       "title": "NSASA Presidency | Wasilat Atilade",
-      "readableCharacters": 2475,
+      "readableCharacters": 2499,
       "noJavaScript": true
     },
     {
       "path": "/work/nacre",
       "status": 200,
       "title": "Sign-Out After Party | Wasilat Atilade",
-      "readableCharacters": 2201,
+      "readableCharacters": 2183,
       "noJavaScript": true
     },
     {
       "path": "/work/kiln-co",
       "status": 200,
       "title": "Explore 7.0 — Annual Sociology Conference | Wasilat Atilade",
-      "readableCharacters": 2203,
+      "readableCharacters": 2231,
       "noJavaScript": true
     }
   ],
@@ -78,10 +78,10 @@
     "https://wasilah-portfolio.vercel.app/resume",
     "https://wasilah-portfolio.vercel.app/contact",
     "https://wasilah-portfolio.vercel.app/work/halden",
+    "https://wasilah-portfolio.vercel.app/work/kiln-co",
     "https://wasilah-portfolio.vercel.app/work/pulse",
     "https://wasilah-portfolio.vercel.app/work/orbit",
-    "https://wasilah-portfolio.vercel.app/work/nacre",
-    "https://wasilah-portfolio.vercel.app/work/kiln-co"
+    "https://wasilah-portfolio.vercel.app/work/nacre"
   ],
   "previewNoindex": "pass",
   "missingRoutes": "404",

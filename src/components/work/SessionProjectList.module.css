@@ -1,0 +1,2 @@
+.list { display: flex; flex-direction: column; gap: 32px; }
+.list.list > section { margin: 0; }

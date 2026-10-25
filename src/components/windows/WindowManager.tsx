@@ -1,5 +1,6 @@
 'use client';
 import { createContext, useCallback, useContext, useLayoutEffect, useMemo, useReducer, useRef, useSyncExternalStore } from 'react';
+import { prepareNextProjectOrder } from '@/components/work/useSessionProjectOrder';
 import type { WindowId } from '@/data/site';
 import { initialWindowState, windowReducer, type WindowState, isVisible } from './state';
 import { windowRegistry } from './registry';
@@ -8,6 +9,12 @@ import { runWindowTransition, type TransitionPlan, type RunningTransition } from
 import { desktopSnapshot, subscribeDesktop, serverDesktopSnapshot } from './desktopMode';
 function useManagerValue(initialId?: WindowId) {
   const [state, dispatch] = useReducer(windowReducer, initialId, initialWindowState);
+  const workWasPresented = useRef(state.windows.work.visibilityState !== 'closed');
+  useLayoutEffect(() => {
+    const presented = state.windows.work.visibilityState !== 'closed';
+    if (workWasPresented.current && !presented) prepareNextProjectOrder();
+    workWasPresented.current = presented;
+  }, [state.windows.work.visibilityState]);
   const desktop = useSyncExternalStore(subscribeDesktop, desktopSnapshot, serverDesktopSnapshot);
   useLayoutEffect(() => { if (!desktop) dispatch({ type: 'compact' }); }, [desktop]);
   const latest = useRef(state);

@@ -31,7 +31,8 @@
     "test:seo": "node scripts/seo-check.mjs",
     "audit:lighthouse": "node scripts/lighthouse-seo.mjs",
     "test:external": "npm run build && node scripts/external-http-check.mjs --local",
-    "test:external:production": "node scripts/external-http-check.mjs"
+    "test:external:production": "node scripts/external-http-check.mjs",
+    "test:project-order": "node scripts/project-order-check.mjs"
   },
   "keywords": [],
   "author": "",
