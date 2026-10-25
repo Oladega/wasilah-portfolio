@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { ResponsiveImage as Image } from "@/components/shared/ResponsiveImage";
+import { AboutPhotos } from "./AboutPhotos";
 import { useReducedMotion } from "motion/react";
 import { siteConfig } from "@/data/site";
 import { WindowFrame } from "@/components/shared/WindowFrame";
@@ -29,10 +29,8 @@ export function AboutWindow({ onClose }: { onClose: () => void }) {
       </nav>
     }>
       <div ref={content} className={styles.content} tabIndex={0} role="region" aria-label="About Wasilah content">
-        <div className={styles.photos}>
-          <div className={styles.photo}><Image src={about.candid} alt="Wasilah at a costume event" fill sizes="(max-width:809px) 80vw, 350px" priority /></div>
-        </div>
         <div className={styles.copy}>
+          <AboutPhotos />
           <h2>{about.title}</h2>
           <div className={styles.paragraphs}>{about.paragraphs.map(text => <p key={text}>{text}</p>)}</div>
           <section className={styles.details} ref={capabilities} aria-labelledby="about-capabilities">

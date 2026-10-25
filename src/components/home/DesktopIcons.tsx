@@ -1,7 +1,6 @@
 import { useWindowManager } from "@/components/windows/WindowManager";
 import Image from "next/image";
 import optimizedVariants from "@/data/optimized-image-variants.json";
-import { motion } from "motion/react";
 import { navigation, type WindowId } from "@/data/site";
 import styles from "./Home.module.css";
 export function DesktopIcons({
@@ -15,12 +14,11 @@ export function DesktopIcons({
   return (
     <nav aria-label="Portfolio" className={styles.icons}>
       {navigation.map((item) => (
-        <motion.a
+        <a
           ref={element => registerIcon(item.id, element)}
           data-window-launcher={item.id}
           href={`/${item.id}`}
-          drag
-          dragMomentum={false}
+          draggable={false}
           key={item.id}
           className={`${styles.icon} ${styles[item.id]} ${active === item.id ? styles.selected : ""}`}
           onClick={event => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return; event.preventDefault(); onOpen(item.id, event.currentTarget); }}
@@ -44,7 +42,7 @@ export function DesktopIcons({
           </picture>
           <span className={styles.desktopLabel}>{item.label}</span>
           <span className={styles.mobileLabel}>{item.mobileLabel}</span>
-        </motion.a>
+        </a>
       ))}
     </nav>
   );

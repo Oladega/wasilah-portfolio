@@ -70,6 +70,7 @@ export const siteConfig = {
     ],
     portrait: image("NZPMNGX6U6yZRWTpTTs7ZeCDmk"),
     candid: "/images/projects/portrait.webp",
+    studioPortrait: "/images/about-studio-portrait.webp",
   },
 };
 export type WindowId = "about" | "work" | "resume" | "contact";
