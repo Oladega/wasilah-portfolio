@@ -38,6 +38,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "motion": "^14.3.0",
     "next": "^16.4.2",
     "pdfjs-dist": "^6.4.299",
