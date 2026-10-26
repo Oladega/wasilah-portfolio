@@ -17,3 +17,8 @@ public/pdfjs/
 public/og/
 docs/lighthouse/
 public/images/optimized/
+/dist/
+.vinext/
+.wrangler/
+.dev.vars
+.dev.vars.*

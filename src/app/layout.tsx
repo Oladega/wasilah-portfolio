@@ -19,7 +19,7 @@ export default function RootLayout({
       </head>
       <body>
         <DesktopBoundary>{children}</DesktopBoundary>
-        <Analytics />
+        {process.env.NEXT_PUBLIC_DISABLE_VERCEL_ANALYTICS !== "true" && <Analytics />}
       </body>
     </html>
   );

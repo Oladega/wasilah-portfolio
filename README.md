@@ -1,5 +1,7 @@
 # Atilade Wasilat portfolio
 
+Cloudflare Workers staging preparation, validation results, deployment commands, custom-domain cutover and Vercel rollback: [Cloudflare migration guide](docs/cloudflare-migration.md). The existing Next.js/Vercel build remains available. Nothing deploys during a build.
+
 Next.js App Router, React and TypeScript portfolio with a macOS-inspired desktop. Content is in `src/data/site.ts` and `src/data/projects.ts`; original media and downloadable PDFs are in `public/`.
 
 ## Local development
