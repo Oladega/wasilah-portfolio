@@ -34,21 +34,17 @@
   text-transform: uppercase;
   white-space: nowrap;
 }
-.specialties > i {
-  width: 8px;
-  height: 8px;
-  border-radius: 100%;
-  background: #ffda9b;
+.specialtyMarker,
+.specialtySeparator {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  color: #fff;
 }
 .specialties span {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-.specialties b {
-  font-weight: 400;
-  font-size: 9px;
-  line-height: 1;
 }
 .headline {
   width: calc((100vw - 400px) * 0.8);
@@ -93,7 +89,8 @@
   position: absolute;
   top: 50px;
   right: 16px;
-  width: 248px;
+  width: max-content;
+  max-width: calc(100vw - 32px);
   z-index: 2;
   padding: 16px 18px;
   border-radius: 22px;
@@ -189,6 +186,10 @@
   .headline { font-size: 44px; width: calc((100vw - 300px) * 0.8); }
   .greeting { gap: 22px; }
 }
+@media (min-width: 810px) and (max-width: 1024px) {
+  .home { padding-top: 232px; }
+  .headline { width: min(100%, 960px); }
+}
 @media (max-width: 809.98px) {
   .home {
     height: auto;
@@ -208,6 +209,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
   }
   .locationTime {
@@ -305,6 +307,7 @@
   white-space: nowrap;
 }
 .available i {
+  flex-shrink: 0;
   display: block;
   width: 7px;
   height: 7px;
@@ -312,4 +315,7 @@
   background: #54ad88;
   box-shadow: 0 0 0 4px #60d9aa1c;
   animation: pulse 3s infinite;
+}
+@media (max-width: 809.98px) {
+  .available { font-size: 13px; max-width: 100%; white-space: normal; }
 }

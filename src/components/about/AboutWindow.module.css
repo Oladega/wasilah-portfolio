@@ -8,6 +8,8 @@
 .paragraphs { font-size: 18px; line-height: 1.75; color: #f3f6ff; }
 .paragraphs p + p { margin-top: 18px; }
 .details { margin-top: 40px; scroll-margin-top: 28px; }
+.connect { display: inline-flex; align-items: center; gap: 14px; margin-top: 22px; padding: 12px 20px; border-radius: 999px; background: #fff; color: #10162a; font-size: 15px; font-weight: 600; text-decoration: none; }
+.connect:focus-visible { outline: 2px solid #a9d2ff; outline-offset: 4px; }
 .details h3 { font: 400 34px/1.2 var(--font-display); margin-bottom: 18px; }
 .details > p { font-size: 17px; line-height: 1.75; color: #f3f6ff; margin-bottom: 24px; }
 .capabilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; column-gap: clamp(28px, 5vw, 64px); }

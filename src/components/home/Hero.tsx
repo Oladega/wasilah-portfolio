@@ -21,10 +21,10 @@ export function Hero({ onOpenWork, subordinate = false }: { onOpenWork: (launche
   return (
     <section className={styles.greeting} aria-label="Introduction">
       <div className={styles.specialties}>
-        <i />
+        <svg className={styles.specialtyMarker} viewBox="0 0 10 10" aria-hidden="true" focusable="false"><circle cx="5" cy="5" r="5" fill="currentColor" /></svg>
         {siteConfig.specialties.map((specialty, i) => (
           <span key={specialty}>
-            {i > 0 && <b>⏺</b>}
+            {i > 0 && <svg className={styles.specialtySeparator} viewBox="0 0 6 6" aria-hidden="true" focusable="false"><circle cx="3" cy="3" r="3" fill="currentColor" /></svg>}
             {specialty}
           </span>
         ))}

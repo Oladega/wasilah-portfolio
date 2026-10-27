@@ -1,11 +1,13 @@
 import {spawnSync} from 'node:child_process';
 import {appendFile} from 'node:fs/promises';
 
-// A staging-only build: no auth, upload, DNS, or deployment side effects.
+// Builds only: no auth, upload, DNS, or deployment side effects.
+const production = process.argv.includes('--production');
 const env = {
   ...process.env,
   SITE_URL: 'https://wasilah.online',
-  SITE_NOINDEX: 'true',
+  SITE_NOINDEX: production ? 'false' : 'true',
+  CLOUDFLARE_BUILD_TARGET: production ? 'production' : 'staging',
   NEXT_PUBLIC_DISABLE_VERCEL_ANALYTICS: 'true',
 };
 for (const args of [['run', 'prebuild'], ['exec', 'vite', '--', 'build'], ['exec', 'next', '--', 'typegen']]) {
@@ -16,8 +18,7 @@ for (const args of [['run', 'prebuild'], ['exec', 'vite', '--', 'build'], ['exec
 // Static Asset headers do not affect the existing Vercel output in out/.
 await appendFile('dist/client/_headers', `
 /*
-  X-Robots-Tag: noindex
-  X-Content-Type-Options: nosniff
+${production ? '' : '  X-Robots-Tag: noindex\n'}  X-Content-Type-Options: nosniff
 /images/*
   Cache-Control: public, max-age=86400
 /fonts/*

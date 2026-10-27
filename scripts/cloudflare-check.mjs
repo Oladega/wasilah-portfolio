@@ -5,6 +5,7 @@ import {chromium} from 'playwright';
 import {contentSource} from './content-source.mjs';
 
 const base = process.env.BASE_URL || 'http://localhost:3010';
+const production = process.argv.includes('--production');
 const {projects} = await contentSource();
 const routes = ['/', '/about', '/work', '/resume', '/contact', ...projects.map(p => `/work/${p.slug}`)];
 const browser = await chromium.launch({executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
@@ -15,8 +16,9 @@ try {
   for (const path of routes) {
     const response = await page.goto(base + path);
     assert.equal(response.status(), 200, path);
-    assert.match(response.headers()['x-robots-tag'], /noindex/);
-    assert.equal(await page.locator('meta[name=robots]').getAttribute('content'), 'noindex, follow');
+    if (production) assert.ok(!/noindex/i.test(response.headers()['x-robots-tag'] || ''));
+    else assert.match(response.headers()['x-robots-tag'], /noindex/);
+    assert.equal(await page.locator('meta[name=robots]').getAttribute('content'), production ? 'index, follow' : 'noindex, follow');
     assert.equal(new URL(await page.locator('link[rel=canonical]').getAttribute('href')).href, `https://wasilah.online${path}`);
     const title = await page.title();
     assert.ok(!titles.has(title), `Duplicate title: ${path}`);
@@ -36,7 +38,8 @@ try {
   const sitemap = await context.request.get(base + '/sitemap.xml');
   assert.equal(sitemap.status(), 200);
   assert.match(sitemap.headers()['content-type'], /xml/);
-  assert.ok(!(await sitemap.text()).includes('<loc>'), 'Staging sitemap must be empty');
+  const sitemapUrls = [...(await sitemap.text()).matchAll(/<loc>(.*?)<\/loc>/g)].map(match => new URL(match[1]).href);
+  assert.deepEqual(new Set(sitemapUrls), new Set(production ? routes.map(path => `https://wasilah.online${path}`) : []));
   const robots = await context.request.get(base + '/robots.txt');
   assert.equal(robots.status(), 200);
   assert.match(await robots.text(), /Sitemap: https:\/\/wasilah.online\/sitemap.xml/);
@@ -62,7 +65,7 @@ try {
     assert.match(asset.headers()['cache-control'], /max-age=86400/);
   }
   assert.equal(await page.locator('script[src*="_vercel/insights"]').count(), 0);
-  console.log(`Passed ${routes.length} routes without JavaScript, metadata, JSON-LD, staging noindex, sitemap/robots, 404s, immutable JS, font/PDF.js caching and unchanged PDF. Range request returned ${range.status()}.`);
+  console.log(`Passed ${routes.length} routes without JavaScript, metadata, JSON-LD, ${production ? 'production indexing' : 'staging noindex'}, sitemap/robots, 404s, immutable JS, font/PDF.js caching and unchanged PDF. Range request returned ${range.status()}.`);
 } finally {
   await browser.close();
 }

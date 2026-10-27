@@ -20,6 +20,8 @@ export default defineConfig({
       prerender: { routes: "*" },
     }),
     cloudflare({
+      configPath: process.env.CLOUDFLARE_BUILD_TARGET === "production"
+        ? "wrangler.production.jsonc" : "wrangler.jsonc",
       viteEnvironment: {
         name: "rsc",
         childEnvironments: ["ssr"],

@@ -9,7 +9,7 @@ export const siteConfig = {
       "I create, coordinate and promote experiences that connect people.",
   },
   specialties: ["Marketing", "Social Media", "Events"],
-  availability: "Open to work",
+  availability: "Open to internship, entry level roles.",
   timezone: "auto",
   location: "auto",
   wallpaper: {
@@ -25,6 +25,14 @@ export const siteConfig = {
   },
   audio: "/audio/jazzy-amapiano-bounce.m4a",
   about: {
+    next: {
+      heading: "What's next for me?",
+      paragraphs: [
+        "I'm looking for opportunities where I can contribute to meaningful work, learn from experienced teams, and continue building my skills across marketing, growth, and project coordination.",
+        "I'm especially excited by teams that value creativity, collaboration, curiosity, and people who take initiative.",
+      ],
+      cta: "Let's connect",
+    },
     title: "Hi, I’m Wasilah.",
     paragraphs: [
       "I’m Wasilah, a Sociology graduate with experience across social media marketing, events and project coordination, and community engagement.",

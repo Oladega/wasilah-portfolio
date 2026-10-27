@@ -5,6 +5,7 @@ import { useReducedMotion } from "motion/react";
 import { siteConfig } from "@/data/site";
 import { WindowFrame } from "@/components/shared/WindowFrame";
 import { Icon } from "@/components/shared/Icon";
+import { useWindowManager } from "@/components/windows/WindowManager";
 import styles from "./AboutWindow.module.css";
 export function AboutWindow({ onClose }: { onClose: () => void }) {
   const content = useRef<HTMLDivElement>(null);
@@ -14,6 +15,7 @@ export function AboutWindow({ onClose }: { onClose: () => void }) {
   const tools = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const about = siteConfig.about;
+  const { openWindow } = useWindowManager();
   const scrollTo = (node: HTMLElement | null) => {
     if (!node || !content.current) return;
     content.current.scrollTo({ top: content.current.scrollTop + node.getBoundingClientRect().top - content.current.getBoundingClientRect().top - 28, behavior: reduced ? "instant" : "smooth" });
@@ -55,6 +57,15 @@ export function AboutWindow({ onClose }: { onClose: () => void }) {
             </div>
           </section>
           <section className={styles.details} ref={tools} aria-labelledby="about-tools"><h3 id="about-tools">Tools I use</h3><div className={styles.tags}>{about.tools.map(text => <span key={text}>{text}</span>)}</div></section>
+          <section className={styles.details} aria-labelledby="about-next">
+            <h3 id="about-next">{about.next.heading}</h3>
+            <div className={styles.paragraphs}>{about.next.paragraphs.map(text => <p key={text}>{text}</p>)}</div>
+            <a className={styles.connect} href="/contact" onClick={event => {
+              if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+              event.preventDefault();
+              openWindow("contact", event.currentTarget);
+            }}>{about.next.cta}<span aria-hidden="true">↗</span></a>
+          </section>
         </div>
       </div>
     </WindowFrame>

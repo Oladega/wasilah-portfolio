@@ -1,8 +1,35 @@
 # Cloudflare Workers migration preparation
 
+## Domain connection — 26 October 2026
+
+After the user moved the apex domain to the production Worker, they explicitly authorized connecting `www.wasilah.online`. The Custom Domain API successfully attached `www.wasilah.online` to `wasilah-portfolio` and created its managed DNS/certificate entry. Both production hostnames now belong to that Worker. `wrangler.production.jsonc` records both attachments for future deployments. Canonical URLs remain `https://wasilah.online`; no redirect rule was added as part of this attachment.
+
+## Deployment record — 26 October 2026
+
+The user subsequently approved deployment. Production Worker `wasilah-portfolio` is deployed at `https://wasilah-portfolio.katolaoladega.workers.dev`, version `3f708828-858a-45ed-83f4-58d273869ded`. Remote checks passed all ten routes, production indexing, metadata/JSON-LD, full sitemap, PDFs/caching, desktop/mobile navigation and project navigation. Cloudflare API verification confirmed persisted logs at 100% and persisted traces at 5%. No custom domain or DNS was changed. Production-readiness source changes remain local and must be synchronized to GitHub before a future Git build uses them.
+
+Cloudflare's official agent setup was also completed: skills installed under `~/.codex/skills/`, Cloudflare MCP registered in `~/.codex/config.toml` and OAuth authenticated. Restart Codex to load the MCP server. Existing project deployments continue to use local Wrangler.
+
 Prepared locally on 26 October 2026 on `feature/cloudflare-workers`, based on published commit `adc409a`. The user subsequently authorized pushing this isolated branch to GitHub. `vercel.json` disables Vercel automatic deployment for this branch only; main is unchanged. No Cloudflare authentication, upload, deployment, domain attachment or DNS change was performed. The Vercel production site is unaffected.
 
 ## Audit and adapter choice
+
+### Production readiness update
+
+`npm run build:cloudflare` still builds the isolated, noindex staging Worker. **`npm run build:cloudflare:production`** now builds the separately named `wasilah-portfolio` Worker from `wrangler.production.jsonc`, with `index, follow` page metadata, no `X-Robots-Tag: noindex` header and a full ten-route sitemap. Both modes keep canonical/Open Graph/structured-data URLs at `https://wasilah.online`. They share `dist/`, so always build the intended mode immediately before preview/deployment. No custom domain or DNS route is configured in either file.
+
+Both Wrangler configs now enable persisted invocation/application logs at 100% sampling and automatic traces at 5% sampling. This configuration takes effect remotely only after deploying the updated artifact. View the deployed Worker's **Observability** tab for logs/traces; sampling means not every invocation will have a trace. Asset requests served directly by Workers Static Assets do not invoke Worker JavaScript and will not appear as Worker invocation logs. Keep asset delivery direct for efficient traffic handling; use Cloudflare traffic metrics for asset requests. This is operational monitoring, not a replacement for browser page-view analytics. Sources: [Workers Logs](https://developers.cloudflare.com/workers/observability/logs/workers-logs/), [Workers Traces](https://developers.cloudflare.com/workers/observability/traces/).
+
+To preview and verify the production artifact locally:
+
+```sh
+npm run build:cloudflare:production
+npx wrangler dev --config dist/server/wrangler.json --port 3012
+# In a second terminal:
+BASE_URL=http://localhost:3012 npm run test:cloudflare -- --production
+```
+
+For a separately approved production deployment, set the production Cloudflare Worker's name to `wasilah-portfolio`, its build command to `npm run build:cloudflare:production`, and its deploy command to `npx wrangler deploy --config dist/server/wrangler.json`. Keep staging's build command unchanged. This prepares indexing but does not attach `wasilah.online`; domain cutover remains a separate step.
 
 - Next.js 16.4.2, React 19.3.1, App Router, TypeScript. `next.config.ts` retains `output: "export"` and `images.unoptimized: true`.
 - Server Components execute during the build. The ten public page routes already export complete readable HTML, metadata and structured data. Five project paths use `generateStaticParams` and reject unknown slugs. There are no API routes, middleware, server actions, request-dependent pages, databases or authentication bindings.
@@ -87,7 +114,7 @@ Verify staging with `BASE_URL=<printed-workers-url> npm run test:cloudflare` and
 ## Connect wasilah.online later — separate approved cutover
 
 1. First approve staging. Keep the existing Vercel project and its domain configuration active. Record/export the existing DNS records and Vercel targets for **both apex and www**, including current redirects and TTLs; preserve mail records and unrelated subdomains.
-2. Prepare a separate production Worker name/config and production build. Change the staging-only settings in `scripts/build-cloudflare.mjs` to `SITE_NOINDEX: 'false'`, remove the generated `X-Robots-Tag: noindex` header, retain `SITE_URL: 'https://wasilah.online'`, and use the new production Worker config. Leave Vercel Analytics disabled for Cloudflare unless a supported collection service is configured. Rebuild; verify page robots are `index, follow` and the sitemap lists all ten canonical production routes before deployment. Do not reuse the staging noindex artifact on the live domain.
+2. Use the separate production Worker `wasilah-portfolio` and run `npm run build:cloudflare:production`. It selects `wrangler.production.jsonc`, enables search indexing and omits the staging noindex header. Leave Vercel Analytics disabled for Cloudflare unless a supported collection service is configured. Verify page robots are `index, follow` and the sitemap lists all ten canonical production routes before deployment. Do not reuse the staging noindex artifact on the live domain.
 3. Deploy that production artifact to its temporary Workers URL and validate it before touching the domain.
 4. Workers Custom Domains require an active Cloudflare DNS zone. If DNS is elsewhere, plan a separately approved nameserver move after copying **all** records and confirming the existing Vercel origin continues serving. Do not combine an unreviewed DNS-provider migration with the application cutover.
 5. In Cloudflare Workers & Pages, select the production Worker → Settings → Domains & Routes → Add → Custom Domain, and attach the approved hostname(s). Cloudflare provisions its DNS record and certificate. An existing CNAME on the same hostname can conflict and must be deliberately replaced during the approved cutover. Decide whether apex or www redirects to the canonical apex; preserve HTTPS and all paths/query strings. See [Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/).
@@ -103,6 +130,7 @@ Before DNS cutover, rollback is simply continuing to use Vercel; staging is isol
 - `.gitignore`: build/runtime output and local Cloudflare secret files.
 - `vite.config.ts`: vinext, static prerender/cache adapter, Wrangler plugin, stable CSS Module names and consistent metadata build values.
 - `wrangler.jsonc`: isolated staging Worker and static asset binding, no production domains.
+- `wrangler.production.jsonc`: separate indexable production Worker with logs/traces enabled; no domain attachment.
 - `vercel.json`: disable automatic Vercel deployments for this migration branch only.
 - `scripts/build-cloudflare.mjs`: existing media preparation, staging build, noindex/cache headers and Next type regeneration.
 - `scripts/cloudflare-check.mjs`: route, raw HTML/SEO, staging safety, cache and PDF checks.

@@ -38,7 +38,8 @@
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
     "build:cloudflare": "node scripts/build-cloudflare.mjs",
     "preview:cloudflare": "wrangler dev --config dist/server/wrangler.json --port 3010",
-    "test:cloudflare": "node scripts/cloudflare-check.mjs"
+    "test:cloudflare": "node scripts/cloudflare-check.mjs",
+    "build:cloudflare:production": "node scripts/build-cloudflare.mjs --production"
   },
   "keywords": [],
   "author": "",
